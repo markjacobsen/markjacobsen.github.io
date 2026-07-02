@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Server-Admin on MarkJacobsen.net</title><link>https://test.markjacobsen.net/tags/server-admin/</link><description>Recent content in Server-Admin on MarkJacobsen.net</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 21 Oct 2017 21:59:00 +0000</lastBuildDate><atom:link href="https://test.markjacobsen.net/tags/server-admin/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux Startup Email</title><link>https://test.markjacobsen.net/2017/10/linux-startup-email/</link><pubDate>Sat, 21 Oct 2017 21:59:00 +0000</pubDate><guid>https://test.markjacobsen.net/2017/10/linux-startup-email/</guid><description>&lt;p&gt;Want to receive an email any time your linux server reboots? Just create this script…&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo nano /usr/local/sbin/startupemail.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here’s the code for the script…&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
+
+# Lets things startup
+sleep 60
+
+# Get info
+IP=&amp;quot;$(ifconfig | grep -A 1 'eth0' | tail -1 | cut -d ':' -f 2 | cut -d ' ' -f 1)&amp;quot;
+HOSTNAME=`hostname`
+
+#Send email
+echo &amp;quot;IP: $IP, Host: $HOSTNAME&amp;quot; | mail -s &amp;quot;Server Started&amp;quot; me@there.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Make sure to make it executable…&lt;/p&gt;</description></item></channel></rss>

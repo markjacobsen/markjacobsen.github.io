@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Performance Tuning on MarkJacobsen.net</title><link>https://test.markjacobsen.net/tags/performance-tuning/</link><description>Recent content in Performance Tuning on MarkJacobsen.net</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 17 Mar 2014 15:39:21 +0000</lastBuildDate><atom:link href="https://test.markjacobsen.net/tags/performance-tuning/index.xml" rel="self" type="application/rss+xml"/><item><title>Find time between records in a logging table with DB2</title><link>https://test.markjacobsen.net/2014/03/find-time-between-records-in-a-logging-table-with-db2/</link><pubDate>Mon, 17 Mar 2014 15:39:21 +0000</pubDate><guid>https://test.markjacobsen.net/2014/03/find-time-between-records-in-a-logging-table-with-db2/</guid><description>&lt;p&gt;One trick I’ve used for quite a while is to have stored procs “log” information to a table with the structure…&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;XX.SYS_PROC_AUD
+(
+PROC_X,
+ACTIVITY_X,
+CREATED_TS,
+ERROR_NB
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;…which is great for seeing what’s going on across the board, on a proc by proc basis, or looking for specific things. But what about when management request “metrics” about how things are running? Well, since I already log stop and start of the procs to the aforementioned table, you can use a WITH query to help get run times of procs and even between procs without resorting to Excel like so…&lt;/p&gt;</description></item><item><title>DB2: When were index stats last updated on a table?</title><link>https://test.markjacobsen.net/2014/03/db2-when-were-index-stats-last-updated-on-a-table/</link><pubDate>Fri, 07 Mar 2014 20:51:56 +0000</pubDate><guid>https://test.markjacobsen.net/2014/03/db2-when-were-index-stats-last-updated-on-a-table/</guid><description>&lt;p&gt;To find out when stats were updated for an index, run the following SQL substituting your schema and table names…&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT IND.TABSCHEMA,
+ IND.TABNAME,
+ IND.INDNAME,
+ IND.COLNAMES,
+ IND.STATS_TIME AS IDX_STATS_TIME, 
+ T.STATS_TIME TBL_STATS_TIME, 
+ CASE T.VOLATILE
+ WHEN 'C' THEN 'YES'
+ ELSE T.VOLATILE
+ END AS TBL_VOLATILE,
+ T.OWNERTYPE AS TBL_OWNERTYPE,
+ T.TYPE AS TBL_TYPE
+FROM SYSCAT.INDEXES IND 
+ LEFT OUTER JOIN SYSCAT.TABLES T
+ ON IND.TABSCHEMA = T.TABSCHEMA
+ AND IND.TABNAME = T.TABNAME
+WHERE T.OWNERTYPE != 'S'
+ AND IND.TABNAME = 'MY_TABLE' 
+ AND IND.TABSCHEMA = 'XX' 
+ORDER BY 
+ IND.TABSCHEMA,
+ IND.TABNAME,
+ IND.INDNAME 
+FOR READ ONLY WITH UR;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Analyzing a Memory Leak in a Java Application</title><link>https://test.markjacobsen.net/2014/02/analyzing-a-memory-leak-in-a-java-application/</link><pubDate>Fri, 21 Feb 2014 19:00:30 +0000</pubDate><guid>https://test.markjacobsen.net/2014/02/analyzing-a-memory-leak-in-a-java-application/</guid><description>&lt;p&gt;In trying to diagnose an Out of Memory error in a large Java application, a co-worker of mine (&lt;a href="https://test.markjacobsen.net/people/chad-handrich/" target="_blank"&gt;Chad Handrich&lt;/a&gt;) came across the article &lt;a href="http://rejeev.blogspot.com/2009/04/analyzing-memory-leak-in-java.html" target="_blank"&gt;Analyzing a Memory Leak in Java Applications using VisualVM&lt;/a&gt; and used the tips in it to find a memory leak that had been causing OOM errors for quite some time.&lt;/p&gt;
+&lt;p&gt;He also found that another helpful tool is the “Performance Monitor” app that comes with Windows. To use it, create a new “User Defined Data Collector Set”. Choose the option “Create Manually”, then “Performance Counter”, then you can select “Process”, and choose all the byte-count style counters if analyzing memory usage. And choose the “java.exe” instance from the list. Once it’s created, right click the collector you made and select “Start”. It will begin polling and saving the metrics you specified.&lt;/p&gt;</description></item><item><title>DB2 Stored Proc Performance Analysis</title><link>https://test.markjacobsen.net/2014/02/db2-stored-proc-performance-analysis/</link><pubDate>Tue, 04 Feb 2014 11:00:02 +0000</pubDate><guid>https://test.markjacobsen.net/2014/02/db2-stored-proc-performance-analysis/</guid><description>&lt;p&gt;Have you ever wondered what tables and indexes a DB2 stored proc are using? How about if the proc has been rebound since the stats were last updated? Are there even stats for the table you’re querying? Luckily I work with a very talented application DBA (&lt;a href="https://test.markjacobsen.net/people/fred-johnson/" target="_blank"&gt;Fred Johnson&lt;/a&gt;) who put together the following query to tell you all these sorts of things. It’s quite long, but all you need to do is set your proc in the “FILTER_PARMS” “VALUES” section at the top of the query.&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,62 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>MarkJacobsen.net</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content><meta name=generator content="Hugo 0.163.3"><meta name=robots content="index, follow"><link rel=stylesheet href=/ananke/css/main.02a37ad6c4e155c542d276915a0e3f83f5c7c5fec443350f6e60753f1679b7a7.css integrity="sha256-AqN61sThVcVC0naRWg4/g/XHxf7EQzUPbmB1PxZ5t6c=" crossorigin=anonymous><script>(function(){"use strict";function t(){for(var t=document.querySelectorAll(".code-block .code-copy[hidden]"),e=0;e<t.length;e++)t[e].hidden=!1}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",t):t();function e(e){var t=e.querySelector(".code-copy-label"),n=t?t.textContent:null;e.classList.add("is-copied"),t&&(t.textContent="Copied"),window.setTimeout(function(){e.classList.remove("is-copied"),t&&n!==null&&(t.textContent=n)},2e3)}function n(e){var n,t=document.createElement("textarea");t.value=e,t.setAttribute("readonly",""),t.style.position="absolute",t.style.left="-9999px",document.body.appendChild(t),t.select(),n=!1;try{n=document.execCommand("copy")}catch{n=!1}return document.body.removeChild(t),n}function s(t){var s,o,a,i=t.closest(".code-block");if(!i)return;if(s=i.querySelector("pre"),!s)return;a=s.querySelector("code")||s,o=a.innerText,navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(o).then(function(){e(t)},function(){n(o)&&e(t)}):n(o)&&e(t)}document.addEventListener("click",function(e){var t=e.target.closest(".code-copy");t&&s(t)})})()</script><link href=/tags/performance-tuning/index.xml rel=alternate type=application/rss+xml title=MarkJacobsen.net><link href=/tags/performance-tuning/index.xml rel=feed type=application/rss+xml title=MarkJacobsen.net><link rel=canonical href=https://test.markjacobsen.net/tags/performance-tuning/><meta property="og:url" content="https://test.markjacobsen.net/tags/performance-tuning/"><meta property="og:site_name" content="MarkJacobsen.net"><meta property="og:title" content="Performance Tuning"><meta property="og:locale" content="en_us"><meta property="og:type" content="website"><meta itemprop=name content="Performance Tuning"><meta itemprop=datePublished content="2014-03-17T15:39:21+00:00"><meta itemprop=dateModified content="2014-03-17T15:39:21+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Performance Tuning"></head><body class="ma0 avenir bg-near-white production is-term"><header><div class="pb3-m pb6-l bg-black"><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l center items-center justify-between"><a href=/ class="f3 fw2 hover-white white-90 dib no-underline">MarkJacobsen.net</a><div class="flex-l items-center"><div class=ananke-socials></div></div></div></nav><div class="tc-l pv3 ph3 ph4-ns"><h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">Performance Tuning</h1></div></div></header><main class=pb7 role=main><article class="pa3 pa4-ns nested-copy-line-height"><section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links mid-gray"></section><section class="flex-ns mt5 flex-wrap justify-around"><div class="w-100 w-30-l mb4 relative bg-white"><div class="mb3 pa4 mid-gray overflow-hidden"><time class="f6 db" datetime=2014-03-17T15:39:21Z>March 17, 2014</time><h1 class="f3 near-black"><a href=/2014/03/find-time-between-records-in-a-logging-table-with-db2/ class="link black dim">Find time between records in a logging table with DB2</a></h1><div class="nested-links f5 lh-copy nested-copy-line-height"><p>One trick I’ve used for quite a while is to have stored procs “log” information to a table with the structure…</p><pre><code>XX.SYS_PROC_AUD
+(
+PROC_X,
+ACTIVITY_X,
+CREATED_TS,
+ERROR_NB
+)
+</code></pre><p>…which is great for seeing what’s going on across the board, on a proc by proc basis, or looking for specific things. But what about when management request “metrics” about how things are running? Well, since I already log stop and start of the procs to the aforementioned table, you can use a WITH query to help get run times of procs and even between procs without resorting to Excel like so…</p></div><a href=/2014/03/find-time-between-records-in-a-logging-table-with-db2/ class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a></div></div><div class="w-100 w-30-l mb4 relative bg-white"><div class="mb3 pa4 mid-gray overflow-hidden"><time class="f6 db" datetime=2014-03-07T20:51:56Z>March 7, 2014</time><h1 class="f3 near-black"><a href=/2014/03/db2-when-were-index-stats-last-updated-on-a-table/ class="link black dim">DB2: When were index stats last updated on a table?</a></h1><div class="nested-links f5 lh-copy nested-copy-line-height"><p>To find out when stats were updated for an index, run the following SQL substituting your schema and table names…</p><pre><code>SELECT  IND.TABSCHEMA,
+        IND.TABNAME,
+        IND.INDNAME,
+        IND.COLNAMES,
+        IND.STATS_TIME AS IDX_STATS_TIME, 
+        T.STATS_TIME TBL_STATS_TIME, 
+        CASE T.VOLATILE
+            WHEN 'C' THEN 'YES'
+            ELSE T.VOLATILE
+        END AS TBL_VOLATILE,
+        T.OWNERTYPE AS TBL_OWNERTYPE,
+        T.TYPE AS TBL_TYPE
+FROM    SYSCAT.INDEXES IND 
+            LEFT OUTER JOIN SYSCAT.TABLES T
+                ON IND.TABSCHEMA = T.TABSCHEMA
+                    AND IND.TABNAME = T.TABNAME
+WHERE   T.OWNERTYPE != 'S'
+        AND IND.TABNAME = 'MY_TABLE' 
+        AND IND.TABSCHEMA = 'XX' 
+ORDER BY 
+        IND.TABSCHEMA,
+        IND.TABNAME,
+        IND.INDNAME 
+FOR READ ONLY WITH UR;
+</code></pre><p><em>Please remember to subscribe to the <a href=https://markjacobsen.net/newsletter target=_blank>newsletter</a> or <a href=https://markjacobsen.net/feed target=_blank>feed</a> to stay up to date!</em></p></div><a href=/2014/03/db2-when-were-index-stats-last-updated-on-a-table/ class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a></div></div><div class="w-100 w-30-l mb4 relative bg-white"><div class="mb3 pa4 mid-gray overflow-hidden"><time class="f6 db" datetime=2014-02-21T19:00:30Z>February 21, 2014</time><h1 class="f3 near-black"><a href=/2014/02/analyzing-a-memory-leak-in-a-java-application/ class="link black dim">Analyzing a Memory Leak in a Java Application</a></h1><div class="nested-links f5 lh-copy nested-copy-line-height"><p>In trying to diagnose an Out of Memory error in a large Java application, a co-worker of mine (<a href=/people/chad-handrich/ target=_blank>Chad Handrich</a>) came across the article <a href=http://rejeev.blogspot.com/2009/04/analyzing-memory-leak-in-java.html target=_blank>Analyzing a Memory Leak in Java Applications using VisualVM</a> and used the tips in it to find a memory leak that had been causing OOM errors for quite some time.</p><p>He also found that another helpful tool is the “Performance Monitor” app that comes with Windows. To use it, create a new “User Defined Data Collector Set”. Choose the option “Create Manually”, then “Performance Counter”, then you can select “Process”, and choose all the byte-count style counters if analyzing memory usage. And choose the “java.exe” instance from the list. Once it’s created, right click the collector you made and select “Start”. It will begin polling and saving the metrics you specified.</p></div><a href=/2014/02/analyzing-a-memory-leak-in-a-java-application/ class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a></div></div><div class="w-100 w-30-l mb4 relative bg-white"><div class="mb3 pa4 mid-gray overflow-hidden"><time class="f6 db" datetime=2014-02-04T11:00:02Z>February 4, 2014</time><h1 class="f3 near-black"><a href=/2014/02/db2-stored-proc-performance-analysis/ class="link black dim">DB2 Stored Proc Performance Analysis</a></h1><div class="nested-links f5 lh-copy nested-copy-line-height"><p>Have you ever wondered what tables and indexes a DB2 stored proc are using? How about if the proc has been rebound since the stats were last updated? Are there even stats for the table you’re querying? Luckily I work with a very talented application DBA (<a href=/people/fred-johnson/ target=_blank>Fred Johnson</a>) who put together the following query to tell you all these sorts of things. It’s quite long, but all you need to do is set your proc in the “FILTER_PARMS” “VALUES” section at the top of the query.</p></div><a href=/2014/02/db2-stored-proc-performance-analysis/ class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a></div></div></section></article></main><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href=https://test.markjacobsen.net/>&copy; MarkJacobsen.net 2026</a><div><div class=ananke-socials></div></div></div></footer></body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
