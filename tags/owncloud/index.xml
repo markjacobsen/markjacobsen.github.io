@@ -2,5 +2,4 @@
 &lt;pre&gt;&lt;code&gt;sudo -u username php /path/to/owncloud/console.php files:scan --all
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You may also want to consider adding it to the crontab for “username” on a daily basis.&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href="https://techblog.jeppson.org/2014/10/refresh-owncloud-file-cache/" target="_blank"&gt;this site&lt;/a&gt; for pointing me in the right direction.&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Thanks to &lt;a href="https://techblog.jeppson.org/2014/10/refresh-owncloud-file-cache/" target="_blank"&gt;this site&lt;/a&gt; for pointing me in the right direction.&lt;/p&gt;</description></item></channel></rss>

@@ -6,6 +6,4 @@ XPathFactory factory = XPathFactory.newInstance();
 XPath xpath = factory.newXPath();
 XPathExpression expr = xpath.compile(&amp;quot;/items/item[@id='2']&amp;quot;);
 return (NodeList)expr.evaluate(domDocument, XPathConstants.NODESET);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>
