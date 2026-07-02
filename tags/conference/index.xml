@@ -1,2 +1,594 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Conference on MarkJacobsen.net</title><link>https://test.markjacobsen.net/tags/conference/</link><description>Recent content in Conference on MarkJacobsen.net</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 16 Dec 2020 18:10:58 +0000</lastBuildDate><atom:link href="https://test.markjacobsen.net/tags/conference/index.xml" rel="self" type="application/rss+xml"/><item><title>ArchConf 2020</title><link>https://test.markjacobsen.net/2020/12/archconf-2020/</link><pubDate>Wed, 16 Dec 2020 18:10:58 +0000</pubDate><guid>https://test.markjacobsen.net/2020/12/archconf-2020/</guid><description>&lt;p&gt;Last week I had the opportunity to “attend” &lt;a href="https://archconf.com/" target="_blank" rel="noreferrer noopener"&gt;ArchConf&lt;/a&gt; (virtually). Of the sessions I attended, Venkat Subramaniam’s presentation of “Building Evolutionary Architectures” was easily the best and combined an engaging and enthusiastic style with useful content. David Sietz’s “Data as a Service (DaaS)” presentation was also very good and applicable for my needs. Aside from that, Joshua Smith and Laine Minor from RedHat were probably the most entertaining/fun/funny.&lt;/p&gt;
-&lt;p&gt;If you’re interested, here are my notes for each session I attended and took notes for :). &lt;a href="https://archconf.com/app/member/501/replay" target="_blank" rel="noreferrer noopener"&gt;Replays&lt;/a&gt; (for attendees only)&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Conference on MarkJacobsen.net</title><link>https://test.markjacobsen.net/tags/conference/</link><description>Recent content in Conference on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 16 Dec 2020 18:10:58 +0000</lastBuildDate><atom:link href="https://test.markjacobsen.net/tags/conference/index.xml" rel="self" type="application/rss+xml"/><item><title>ArchConf 2020</title><link>https://test.markjacobsen.net/2020/12/archconf-2020/</link><pubDate>Wed, 16 Dec 2020 18:10:58 +0000</pubDate><guid>https://test.markjacobsen.net/2020/12/archconf-2020/</guid><description>&lt;p&gt;Last week I had the opportunity to “attend” &lt;a href="https://archconf.com/" target="_blank" rel="noreferrer noopener"&gt;ArchConf&lt;/a&gt; (virtually). Of the sessions I attended, Venkat Subramaniam’s presentation of “Building Evolutionary Architectures” was easily the best and combined an engaging and enthusiastic style with useful content. David Sietz’s “Data as a Service (DaaS)” presentation was also very good and applicable for my needs. Aside from that, Joshua Smith and Laine Minor from RedHat were probably the most entertaining/fun/funny.&lt;/p&gt;
+&lt;p&gt;If you’re interested, here are my notes for each session I attended and took notes for :). &lt;a href="https://archconf.com/app/member/501/replay" target="_blank" rel="noreferrer noopener"&gt;Replays&lt;/a&gt; (for attendees only)&lt;/p&gt;
+&lt;h2 id="architecting-cloud-native-applications"&gt;&lt;strong&gt;Architecting Cloud Native Applications&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/ntschutta" target="_blank" rel="noreferrer noopener"&gt;Nathaniel Schutta&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: In order to successfully implement micro-services they must have consistent/good monitoring
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ &lt;a href="https://tanzu.vmware.com/content/ebooks/responsible-microservices-ebook" target="_blank" rel="noreferrer noopener"&gt;Responsible Micro-Services ebook&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Beware of developers implementing technologies/languages/patterns for &amp;#8220;resume driven design&amp;#8221; reasons&amp;#8230; not for the right reasons.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Shared servers are a liability
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://dzone.com/articles/the-12-factor-app-best-practices-in-cloud-native-a" target="_blank" rel="noreferrer noopener"&gt;The 12 Factor App: Best Practices in Cloud Native Applications and Microservices&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ You can consider a service a function because you can spin the number of instances down to zero
+ &lt;/li&gt;
+ &lt;li&gt;
+ Quality Attributes/Requirements = Non Functional Requirements (NFR)&lt;ul&gt;
+ &lt;li&gt;
+ Personally I would really like to see us start using &amp;#8220;Quality Attributes&amp;#8221; or &amp;#8220;Quality Requirements&amp;#8221; instead of NFR.
+ &lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://codesqueeze.com/the-7-software-ilities-you-need-to-know/" target="_blank" rel="noreferrer noopener"&gt;The 7 Software “-ilities” You Need To Know&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://towardsdatascience.com/architecting-for-the-ilities-6fae9d00bf6b" target="_blank" rel="noreferrer noopener"&gt;Architecting For the -ilities&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="http://www.softwarearchitecturenotes.com/architecturerequirements.html" target="_blank" rel="noreferrer noopener"&gt;Architecture Requirements are Ilities&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ You have to consider what ility attributes are important for which stakeholder, and what decisions that results in.
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://www.thoughtworks.com/books/building-evolutionary-architectures" target="_blank" rel="noreferrer noopener"&gt;Evolutionary architecture book&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;microservice = anything that can be re-written in 2 weeks or less&lt;/span&gt;&lt;ul&gt;
+ &lt;li&gt;
+ I really like this definition and goal.
+ &lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ high cohesion, low coupling
+ &lt;/li&gt;
+ &lt;li&gt;
+ A &lt;a href="https://www.jrebel.com/blog/what-is-a-modular-monolith" target="_blank" rel="noreferrer noopener"&gt;Modular Monolith&lt;/a&gt; might be a better approach in certain situations. A modular monolith is a software design approach in which a monolith is designed with an emphasis on interchangeable (and potentially reusable) modules.
+ &lt;/li&gt;
+ &lt;li&gt;
+ If you have to ask what something is (a tech, language, platform), you don&amp;#8217;t need it.
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Monitoring is vital to a thriving microservice arch&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://blog.appoptics.com/the-four-golden-signals-for-monitoring-distributed-systems/" target="_blank" rel="noreferrer noopener"&gt;The Four Golden Signals for Monitoring Distributed Systems&lt;/a&gt;: latency, traffic load, error rate, saturation
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://martinfowler.com/bliki/CircuitBreaker.html" target="_blank" rel="noreferrer noopener"&gt;Circuit Breaker Pattern&lt;/a&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="paved-roads-8211-architecting-for-distributed-teams"&gt;&lt;strong&gt;Paved Roads – Architecting for Distributed Teams&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/ntschutta" target="_blank" rel="noreferrer noopener"&gt;Nathaniel Schutta&lt;/a&gt; – 4/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Any alert someone gets should be informative and actionable. Otherwise, put it on a dashboard or report.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Even when we&amp;#8217;re in person we&amp;#8217;re still communicating remotely (sending IMs, Texts, etc)
+ &lt;/li&gt;
+ &lt;li&gt;
+ Fitness function = todo list from arch to devs
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Review boards don&amp;#8217;t work!&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Just because we can measure it does NOT mean it matters&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ If everything is an option, nothing is an option
+ &lt;/li&gt;
+ &lt;li&gt;
+ Look into &lt;a href="https://spring.io/projects/spring-cloud-contract" target="_blank" rel="noreferrer noopener"&gt;spring cloud contract&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Temporal fitness function = essentially a reminder (ex: Review this code in 1 year)
+ &lt;/li&gt;
+ &lt;li&gt;
+ Keep track of non-decisions/non-goals too (i.e. we don&amp;#8217;t care about X because&amp;#8230;)
+ &lt;/li&gt;
+ &lt;li&gt;
+ Fitness functions should be visible and reviewed at least annually.
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;If you&amp;#8217;re going to get an alert it needs to be informative AND actionable. Just informative goes on a dashboard or report.&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://www.thoughtworks.com/radar/byor" target="_blank" rel="noreferrer noopener"&gt;Look into building a &amp;#8220;radar&amp;#8221;&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="http://thoughtworks.com/radar"&gt;thoughtworks.com/radar&lt;/a&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="to-hug-or-to-strangle-tips-for-dealing-with-monolith-pain"&gt;&lt;strong&gt;To Hug or to Strangle: Tips for Dealing with Monolith Pain&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/lainieftw" target="_blank" rel="noreferrer noopener"&gt;Laine Minor&lt;/a&gt; &amp;amp; &lt;a href="https://twitter.com/architect_josh" target="_blank" rel="noreferrer noopener"&gt;Josh Smith&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Consider &amp;#8220;hugging&amp;#8221; (applying micro-service best practices) legacy apps that are too big to strangle
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ pain = the thing that prevents you from doing the part of your job you came/want to do
+ &lt;/li&gt;
+ &lt;li&gt;
+ pain = mental load of things you know are not as they should be
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;You get an architecture whether you plan for it or not&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Long time between delivery is a BUSINESS problem
+ &lt;/li&gt;
+ &lt;li&gt;
+ Biggest benefit of microservices is clean lines
+ &lt;/li&gt;
+ &lt;li&gt;
+ Option 1: strangle, then hug
+ &lt;/li&gt;
+ &lt;li&gt;
+ Option 2: hug, then strangle
+ &lt;/li&gt;
+ &lt;li&gt;
+ Hugging = applying microservice best practices to a monolith (monitoring, etc)
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="developer-to-architect"&gt;&lt;strong&gt;Developer To Architect&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/ntschutta" target="_blank" rel="noreferrer noopener"&gt;Nathaniel Schutta&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Review boards and heavy handed governance doesn&amp;#8217;t work.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Consequences can be positive and negative
+ &lt;/li&gt;
+ &lt;li&gt;
+ Maximizing one minimizes another
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Governance in most orgs is heavyweight, high ceremony&amp;#8230; and it does NOT work&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ SLA vs SLA. The A matters and it indicates a consequence. If there is no consequence its an SLO (Objective)
+ &lt;/li&gt;
+ &lt;li&gt;
+ A reform most often advances via indirection
+ &lt;/li&gt;
+ &lt;li&gt;
+ It&amp;#8217;s not just about the tech. It&amp;#8217;s the relationships
+ &lt;/li&gt;
+ &lt;li&gt;
+ Portfolio architect provides high-level architectural and software engineering expertise to managers and technical staff.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Domain architect : the way he describes it is essentially what we describe as a digital architect
+ &lt;/li&gt;
+ &lt;li&gt;
+ Specifically mentioned TOGAF as a &amp;#8220;meh&amp;#8221; certification
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="sifting-technologies-8211-separating-the-wheat-from-the-chaff"&gt;&lt;strong&gt;Sifting Technologies – Separating the Wheat From the Chaff&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/ntschutta" target="_blank" rel="noreferrer noopener"&gt;Nathaniel Schutta&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;:&amp;nbsp;Consider implementing architectural briefings
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Education isn&amp;#8217;t something you finish
+ &lt;/li&gt;
+ &lt;li&gt;
+ Attention is like real estate. they&amp;#8217;re not making any more of it.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Architectural briefing: why, how, where should/n&amp;#8217;t we use
+ &lt;/li&gt;
+ &lt;li&gt;
+ Not just how much does the thing cost, but how much does it cost to use it (dev, maint, hardware, etc)?
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Speed reduces risk&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ There&amp;#8217;s a difference between a dead tech vs a mature one
+ &lt;/li&gt;
+ &lt;li&gt;
+ Developers are like cats. They&amp;#8217;ll push back just on principle.
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="building-evolutionary-architectures"&gt;&lt;strong&gt;Building Evolutionary Architectures&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/venkat_s" target="_blank" rel="noreferrer noopener"&gt;Venkat Subramaniam&lt;/a&gt; – 5/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Postpone decisions until the last possible moment because it&amp;#8217;s possible YAGNI and doing so lessens the considerations for reversibility. Keep all code as simple as possible.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ UFD =&amp;nbsp;Up Front Design
+ &lt;/li&gt;
+ &lt;li&gt;
+ Now that we&amp;#8217;re &amp;#8220;Agile&amp;#8221; we&amp;#8217;re not doing enough UFD (nor big UFD)
+ &lt;/li&gt;
+ &lt;li&gt;
+ Power point architects = dangerous
+ &lt;/li&gt;
+ &lt;li&gt;
+ Scrum master was never intended to be a title, else there&amp;#8217;s no such thing as a self organizing team
+ &lt;/li&gt;
+ &lt;li&gt;
+ &amp;#8220;adaptive planning&amp;#8221; and &amp;#8220;feedback driven development&amp;#8221; are the most important words for Agile
+ &lt;/li&gt;
+ &lt;li&gt;
+ Rate all features/stories by business value and architectural impact
+ &lt;/li&gt;
+ &lt;li&gt;
+ Goal should be delivering value. Not using a particular tech.
+ &lt;/li&gt;
+ &lt;li&gt;
+ People confuse unfamiliar w/ complex
+ &lt;/li&gt;
+ &lt;li&gt;
+ People confuse familiar with simple
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;reversibility = the ability to back out of a decision (less expensive)&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;postpone decisions until the last responsible moment&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ YAGNI = You Aren&amp;#8217;t Gonna Need It
+ &lt;/li&gt;
+ &lt;li&gt;
+ parsimony = the most minimal solution. &lt;span class="has-inline-color has-vivid-red-color"&gt;Ask &amp;#8220;do we have to&amp;#8221; for everything&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ triangulate = implement 1 way, then another, and abstract common code to Base class
+ &lt;/li&gt;
+ &lt;li&gt;
+ Don&amp;#8217;t START with an abstraction. Refactor into it.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Postel&amp;#8217;s law = be generous about what you receive and conservative about what you send
+ &lt;/li&gt;
+ &lt;li&gt;
+ Good reuse comes from repeated &lt;em&gt;active&lt;/em&gt; use
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Be ruthless in minimizing dependencies&lt;/span&gt; including libraries and frameworks
+ &lt;/li&gt;
+ &lt;li&gt;
+ http://www.agiledeveloper.com/downloads.html
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="core-software-design-principles"&gt;&lt;strong&gt;Core Software Design Principles&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/venkat_s" target="_blank" rel="noreferrer noopener"&gt;Venkat Subramaniam&lt;/a&gt; – 4/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Have the courage to postpone doing things, and when you do, keep it DRY
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ DRY = don&amp;#8217;t repeat yourself
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Violating DRY results in duplication of effort, not just duplication of code&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Manual testing is a violation of DRY
+ &lt;/li&gt;
+ &lt;li&gt;
+ Manual deploy is a violation of DRY
+ &lt;/li&gt;
+ &lt;li&gt;
+ Effort: now &gt; later -&gt; postpone, now == later -&gt; postpone, now &lt; later -&gt; eval probability of needing it
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;We need to have the courage to postpone doing things&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ SRP = single responsibility principle
+ &lt;/li&gt;
+ &lt;li&gt;
+ SLAP = Single Level of Abstraction Principle
+ &lt;/li&gt;
+ &lt;li&gt;
+ Then use the Compose Method Pattern to combine same level SLAPs
+ &lt;/li&gt;
+ &lt;li&gt;
+ OCP = open close principle
+ &lt;/li&gt;
+ &lt;li&gt;
+ Software modules (functions, classes, etc) must be open for extension but closed from modification
+ &lt;/li&gt;
+ &lt;li&gt;
+ LSP = Liskov Substitution Principle
+ &lt;/li&gt;
+ &lt;li&gt;
+ Inheritance should only be used for substitutability and not for reuse
+ &lt;/li&gt;
+ &lt;li&gt;
+ DIY = Dependency Inversion Principle -&gt; class should not depend on another class. Both should depend on abstraction or interface.
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="cloud-integrations-and-data-architecture-for-enterprise-applications"&gt;&lt;strong&gt;Cloud Integrations and Data Architecture for Enterprise Applications&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/rbhardwaj1" target="_blank" rel="noreferrer noopener"&gt;Rohit Bhardwaj&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: The API should come first. Or, when implementing an API for an existing implementation, don&amp;#8217;t model the API on the internal workings of the system.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Application EA -&gt; define our objects, what things they are part of, and the relationships between them
+ &lt;/li&gt;
+ &lt;li&gt;
+ Applications interact with domains and data flows between them
+ &lt;/li&gt;
+ &lt;li&gt;
+ Orchestration services should always queue requests and process/respond async
+ &lt;/li&gt;
+ &lt;li&gt;
+ Lambda is basically serverless (functions)
+ &lt;/li&gt;
+ &lt;li&gt;
+ You might consider using topics/queues for each service instead of load balancer
+ &lt;/li&gt;
+ &lt;li&gt;
+ https://github.com/robertmrk/docker-cometd-demos
+ &lt;/li&gt;
+ &lt;li&gt;
+ Check out &lt;a href="http://cometd.org"&gt;CometD&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Use a correlation id to sync across systems
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;API comes first! Then the implementation.&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="http://schema.org"&gt;schema.org&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ MDM data cleansing: normalize data formats, replace missing values, standardize values, map attributes
+ &lt;/li&gt;
+ &lt;li&gt;
+ Identify sources (producers and consumers of master data) -&gt; collect and analyze metadata -&gt; appt data stewards -&gt; implement data gov program and council -&gt; dev MD model and choose toolset -&gt; Design infra, generate and test MD -&gt; Modify producing and consuming -&gt; implement maint process
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="modeling-for-architects"&gt;&lt;strong&gt;Modeling for Architects&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/ntschutta" target="_blank" rel="noreferrer noopener"&gt;Nathaniel Schutta&lt;/a&gt; – 2/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;:&amp;nbsp;The value in the artifact is not in the artifact itself. It&amp;#8217;s in the conversation it facilitates.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ If the team can&amp;#8217;t understand it, they can&amp;#8217;t build it
+ &lt;/li&gt;
+ &lt;li&gt;
+ It&amp;#8217;s ok to throw out or deprecate a diagram
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;The value in the artifact is not in the artifact itself. It&amp;#8217;s in the conversation it facilitates.&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Component diagrams, deployment diagrams, and sequence diagrams are most common
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="architectural-awareness-engineering-super-skill"&gt;&lt;strong&gt;Architectural Awareness&lt;/strong&gt;: Engineering Super-skill
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/kensipe" target="_blank" rel="noreferrer noopener"&gt;Ken Sipe&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Question everything. Don&amp;#8217;t be afraid of a little chaos or of making mistakes
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Hardest part of architecting is being aware
+ &lt;/li&gt;
+ &lt;li&gt;
+ awareness = awareness or &lt;em&gt;perception&lt;/em&gt; of a fact
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;chaos breeds creativity&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Dryfus model: novice, advanced beginner (most people in IT industry), competent, proficient, expert
+ &lt;/li&gt;
+ &lt;li&gt;
+ you get what you tolerate
+ &lt;/li&gt;
+ &lt;li&gt;
+ shame and fear are toxic
+ &lt;/li&gt;
+ &lt;li&gt;
+ We shouldn&amp;#8217;t loosely couple everything. We should have it in the right places.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Team strengths: empathy, vulnerable/humble, collaborate/communicate, ability to share vision.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Is your process intentional or not?
+ &lt;/li&gt;
+ &lt;li&gt;
+ &amp;#8220;scrum but&amp;#8230;&amp;#8221; = I want all the benefits but don&amp;#8217;t want to pay for it
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Why are we doing ..x..? Should we do something else? Is it working?&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ context matters&amp;#8230; and context could be foreign
+ &lt;/li&gt;
+ &lt;li&gt;
+ embrace inconsistency
+ &lt;/li&gt;
+ &lt;li&gt;
+ dependencies matter
+ &lt;/li&gt;
+ &lt;li&gt;
+ it&amp;#8217;s a mistake to worry too much about scalability from the start, but also to not think about it at all.
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="architectural-resiliency"&gt;&lt;strong&gt;Architectural Resiliency&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/jtdeane" target="_blank" rel="noreferrer noopener"&gt;Jeremy Deane&lt;/a&gt; – 4/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Need to have ownership to have accountability, and ownership needs to be end to end.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ &lt;a href="https://www.amazon.com/dp/B00IG71FAS/ref=dp-kindle-redirect?_encoding=UTF8&amp;btkr=1" target="_blank" rel="noreferrer noopener"&gt;Threat Modeling book&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="http://openmastery.org" target="_blank" rel="noreferrer noopener"&gt;openmastery.org&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ promote accountability/ownership. No orphans
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Correlate activities. use a tracking id/correlation id&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Do synthetic transactions
+ &lt;/li&gt;
+ &lt;li&gt;
+ Look into &amp;#8220;&lt;a href="https://www.datadoghq.com/" target="_blank" rel="noreferrer noopener"&gt;data dog&lt;/a&gt;&amp;#8221; for dashboarding
+ &lt;/li&gt;
+ &lt;li&gt;
+ Cloud hosting should be multi-region
+ &lt;/li&gt;
+ &lt;li&gt;
+ Security Resiliency: Secure by default, defense in depth, least privilege
+ &lt;/li&gt;
+ &lt;li&gt;
+ Event sourcing
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Postel&amp;#8217;s Law &amp;#8211; Be conservative in what you send, be liberal in what you accept&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Bulkheads. Limit failure exposure.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Validate your input. Sanitize your output.
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Need to have end to end ownership&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ https://prezi.com/mb-vcfp-cry8/architectural-resiliency/
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="architectural-trade-offs"&gt;&lt;strong&gt;Architectural Trade-offs&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/jtdeane" target="_blank" rel="noreferrer noopener"&gt;Jeremy Deane&lt;/a&gt; – 4/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Be aware that there&amp;#8217;s a trade off (negative) to any choice you make.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ RBAC = Role Based Access Control (ex: AD, Prism)
+ &lt;/li&gt;
+ &lt;li&gt;
+ ABAC = Attribute Based Access Control (context based policies. ex: location based, etc)
+ &lt;/li&gt;
+ &lt;li&gt;
+ Feature Toggles tend to result in technical debt
+ &lt;/li&gt;
+ &lt;li&gt;
+ Blue green results in unnecessary releases
+ &lt;/li&gt;
+ &lt;li&gt;
+ orchestration causes coupling and dependencies
+ &lt;/li&gt;
+ &lt;li&gt;
+ choreography has complexity and needs monitoring
+ &lt;/li&gt;
+ &lt;li&gt;
+ Need to understand the requirements and your domain!
+ &lt;/li&gt;
+ &lt;li&gt;
+ Cloud providers tend to be &amp;#8220;sticky&amp;#8221;. Hard to get out of.
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="how-to-technology-good-8211-tips-for-implementation-at-scale"&gt;&lt;strong&gt;How to Technology Good – Tips for Implementation at Scale&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/lainieftw" target="_blank" rel="noreferrer noopener"&gt;Laine Minor&lt;/a&gt; &amp;amp; &lt;a href="https://twitter.com/architect_josh" target="_blank" rel="noreferrer noopener"&gt;Josh Smith&lt;/a&gt; – 2/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: For good or bad, metrics (or data if you prefer) are needed to promote any tech
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Metrics help build understanding, certainty, and trust
+ &lt;/li&gt;
+ &lt;li&gt;
+ Until you have metrics it&amp;#8217;s a non-starter
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="data-as-a-service-daas"&gt;Data as a Service (DaaS)
+&lt;/h2&gt;&lt;p&gt;David Sietz – 5/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway: &lt;/em&gt;Publish data changes to your topics, have microservices consume the data as needed, and version as necessary.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Data model changes are expensive
+ &lt;/li&gt;
+ &lt;li&gt;
+ Use a NoSQL db
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Version all data coming in&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Provisioning data: real time, self guided flow, variable load, parallel
+ &lt;/li&gt;
+ &lt;li&gt;
+ Publishing data: real-time, variable endpoints, variable load, managed access
+ &lt;/li&gt;
+ &lt;li&gt;
+ Use a business lens: risks, rewards, volatility
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;ROI is not always monetary&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Last Responsible Moment (LRM)
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;There&amp;#8217;s nothing wrong with copying data as long as you understand the intent and retention&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Build your data marts at the last responsible moment
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

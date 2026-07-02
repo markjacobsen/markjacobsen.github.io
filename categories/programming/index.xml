@@ -1,30 +1,669 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on MarkJacobsen.net</title><link>https://test.markjacobsen.net/categories/programming/</link><description>Recent content in Programming on MarkJacobsen.net</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 19 Apr 2026 14:48:00 +0000</lastBuildDate><atom:link href="https://test.markjacobsen.net/categories/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Taste vs Skill in Coding with AI</title><link>https://test.markjacobsen.net/2026/04/taste-vs-skill-in-coding-with-ai/</link><pubDate>Sun, 19 Apr 2026 14:48:00 +0000</pubDate><guid>https://test.markjacobsen.net/2026/04/taste-vs-skill-in-coding-with-ai/</guid><description>&lt;p&gt;Came across &lt;a href="https://strategizeyourcareer.com/p/developer-taste-ai-slop" target="_blank" rel="noreferrer noopener"&gt;this article&lt;/a&gt; and I think it does a good job explaining my current views on coding with AI:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on MarkJacobsen.net</title><link>https://test.markjacobsen.net/categories/programming/</link><description>Recent content in Programming on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 19 Apr 2026 14:48:00 +0000</lastBuildDate><atom:link href="https://test.markjacobsen.net/categories/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Taste vs Skill in Coding with AI</title><link>https://test.markjacobsen.net/2026/04/taste-vs-skill-in-coding-with-ai/</link><pubDate>Sun, 19 Apr 2026 14:48:00 +0000</pubDate><guid>https://test.markjacobsen.net/2026/04/taste-vs-skill-in-coding-with-ai/</guid><description>&lt;p&gt;Came across &lt;a href="https://strategizeyourcareer.com/p/developer-taste-ai-slop" target="_blank" rel="noreferrer noopener"&gt;this article&lt;/a&gt; and I think it does a good job explaining my current views on coding with AI:&lt;/p&gt;
 &lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
  &lt;p&gt;
  An important distinction is Taste vs Skill. Taste is what you bring to the problem. Skill is what you do with the problem once you understand it. A lot of engineers have skill without taste. &lt;strong&gt;They can write anything you describe, but they cannot tell you whether the thing you described is worth building. They will follow the spec down into the ground and ship exactly the wrong solution, on time, with full test coverage.&lt;/strong&gt;
- &lt;/p&gt;</description></item><item><title>Measuring the impact of AI on software engineering – with Laura Tacho</title><link>https://test.markjacobsen.net/2025/07/measuring-the-impact-of-ai-on-software-engineering-with-laura-tacho/</link><pubDate>Tue, 29 Jul 2025 11:31:00 +0000</pubDate><guid>https://test.markjacobsen.net/2025/07/measuring-the-impact-of-ai-on-software-engineering-with-laura-tacho/</guid><description>&lt;p&gt;Check out this article: &lt;a href="https://pca.st/episode/a0927348-175d-4ab9-b5c1-683315149b97"&gt;Measuring the impact of AI on software engineering – with Laura Tacho&lt;/a&gt;&lt;figure class="wp-block-embed is-type-rich is-provider-pocket-casts wp-block-embed-pocket-casts"&gt;&lt;/p&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+ Taste is also not speed. Speed is how fast you get from idea to merge. Taste is how often the idea was worth merging in the first place. I have worked with engineers who shipped half as much as the people around them and moved the business twice as far, because every single thing they shipped was pointed at something that mattered. They rejected work that would not move a metric. They pushed back on specs that did not add up. They asked the question everyone else was too busy to ask. This is why &lt;strong&gt;it’s important to listen when these engineers raise a concern, instead of dismissing them because they are slowing down the initiative&lt;/strong&gt;.
+ &lt;/p&gt;
+ &lt;p&gt;
+ The simplest way I can describe taste is this. When you look at a piece of code, you feel something before you can explain what. That feeling is the compressed memory of every system you have broken, every bug you have chased at 2 am, every design you have watched rot under real traffic. AI can approximate the surface patterns. It cannot approximate the ache. That ache is the thing that tells you how much this shortcut is going to cost you in a month. It tells you this abstraction is premature. It tells you this test is testing the wrong layer. &lt;strong&gt;Taste is your scar tissue. Taste is your intuition. AI does not have this.&lt;/strong&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+ This is the pattern I keep coming back to. &lt;strong&gt;Engineers with taste use AI to iterate toward a thing they already know is right. Engineers without taste use AI to guess at what right might look like, and then ship whichever guess compiled.&lt;/strong&gt; These are not the same activity. They look the same from the outside. They produce completely different codebases over the course of a year.
+ &lt;/p&gt;
+ &lt;p&gt;
+ The market rate for typing is dropping fast. The market rate for knowing what to type is not.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Measuring the impact of AI on software engineering – with Laura Tacho</title><link>https://test.markjacobsen.net/2025/07/measuring-the-impact-of-ai-on-software-engineering-with-laura-tacho/</link><pubDate>Tue, 29 Jul 2025 11:31:00 +0000</pubDate><guid>https://test.markjacobsen.net/2025/07/measuring-the-impact-of-ai-on-software-engineering-with-laura-tacho/</guid><description>&lt;p&gt;Check out this article: &lt;a class="link" href="https://pca.st/episode/a0927348-175d-4ab9-b5c1-683315149b97" target="_blank" rel="noopener"
+ &gt;Measuring the impact of AI on software engineering – with Laura Tacho&lt;/a&gt;&lt;figure class="wp-block-embed is-type-rich is-provider-pocket-casts wp-block-embed-pocket-casts"&gt;&lt;/p&gt;
 &lt;div class="wp-block-embed__wrapper"&gt;
  https://pca.st/xtlj21if
 &lt;/div&gt;&lt;/figure&gt; 
-&lt;p&gt;Note: Since this is an automatically created post there is no commentary on it other than any minimal notes I may have included. Read it and do your own critical thinking. I may get around to adding some/more of my own thoughts or categorizing it… but maybe not. Should the article be behind a paywall let me know and I will figure out a way to get it to you.&lt;/p&gt;</description></item><item><title>Handing secrets in PHP Docker Compose site</title><link>https://test.markjacobsen.net/2025/06/handing-secrets-in-php-docker-compose-site/</link><pubDate>Tue, 24 Jun 2025 12:50:00 +0000</pubDate><guid>https://test.markjacobsen.net/2025/06/handing-secrets-in-php-docker-compose-site/</guid><description>&lt;p&gt;If you’re using a single instance server (not Docker Swarm) and Docker Compose, but want to keep your secrets out of source control it’s not too bad. First, make sure you’re excluding “.env” in your .gitignore…&lt;/p&gt;
+&lt;p&gt;Note: Since this is an automatically created post there is no commentary on it other than any minimal notes I may have included. Read it and do your own critical thinking. I may get around to adding some/more of my own thoughts or categorizing it… but maybe not. Should the article be behind a paywall let me know and I will figure out a way to get it to you.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Handing secrets in PHP Docker Compose site</title><link>https://test.markjacobsen.net/2025/06/handing-secrets-in-php-docker-compose-site/</link><pubDate>Tue, 24 Jun 2025 12:50:00 +0000</pubDate><guid>https://test.markjacobsen.net/2025/06/handing-secrets-in-php-docker-compose-site/</guid><description>&lt;p&gt;If you’re using a single instance server (not Docker Swarm) and Docker Compose, but want to keep your secrets out of source control it’s not too bad. First, make sure you’re excluding “.env” in your .gitignore…&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;.env&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Then, add your secrets to a .env file (file name must be exactly .env) in the same folder as your docker-compose.yml…&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;SEC_1=Something&amp;lt;br /&amp;gt; SEC_2=SomethingElse&amp;lt;br /&amp;gt; &lt;/code&gt;&lt;br&gt;
-Then, be sure to expose your secrets in the “environment:” section of your docker-compose…&lt;/p&gt;</description></item><item><title>The Importance of Leverage</title><link>https://test.markjacobsen.net/2021/01/the-importance-of-leverage/</link><pubDate>Sat, 02 Jan 2021 14:32:00 +0000</pubDate><guid>https://test.markjacobsen.net/2021/01/the-importance-of-leverage/</guid><description>&lt;p&gt;I first read this in James Clear’s 3-2-1 Newsletter, but thought the idea from Naval Ravikant was so good that I just had to share…&lt;/p&gt;
+Then, be sure to expose your secrets in the “environment:” section of your docker-compose…&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;    environment:&amp;lt;br /&amp;gt;       SEC_1: ${SEC_1}&amp;lt;br /&amp;gt;       SEC_2: ${SEC_2}&amp;lt;br /&amp;gt; &lt;/code&gt;&lt;br&gt;
+Upload both the .env and docker-compose.yml to the server, and restart docker to pick up the env vars…&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker compose down&amp;lt;br /&amp;gt; docker compose up -d&amp;lt;br /&amp;gt; &lt;/code&gt;&lt;br&gt;
+And finally, use the values in your PHP…&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;getenv('SEC_1')&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Oh yeah, and since your .env won’t be in source control I’d still recommend finding a secure place to save it like a password manager.&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>The Importance of Leverage</title><link>https://test.markjacobsen.net/2021/01/the-importance-of-leverage/</link><pubDate>Sat, 02 Jan 2021 14:32:00 +0000</pubDate><guid>https://test.markjacobsen.net/2021/01/the-importance-of-leverage/</guid><description>&lt;p&gt;I first read this in James Clear’s 3-2-1 Newsletter, but thought the idea from Naval Ravikant was so good that I just had to share…&lt;/p&gt;
 &lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
  &lt;p&gt;
  Humans evolved in societies where there was no leverage. If I was chopping wood or carrying water for you, you knew eight hours put in would be equal to about eight hours of output. Now we&amp;#8217;ve invented leverage&amp;#8230; As a worker, you want to be as leveraged as possible so you have a huge impact without as much time or physical effort.
- &lt;/p&gt;</description></item><item><title>ArchConf 2020</title><link>https://test.markjacobsen.net/2020/12/archconf-2020/</link><pubDate>Wed, 16 Dec 2020 18:10:58 +0000</pubDate><guid>https://test.markjacobsen.net/2020/12/archconf-2020/</guid><description>&lt;p&gt;Last week I had the opportunity to “attend” &lt;a href="https://archconf.com/" target="_blank" rel="noreferrer noopener"&gt;ArchConf&lt;/a&gt; (virtually). Of the sessions I attended, Venkat Subramaniam’s presentation of “Building Evolutionary Architectures” was easily the best and combined an engaging and enthusiastic style with useful content. David Sietz’s “Data as a Service (DaaS)” presentation was also very good and applicable for my needs. Aside from that, Joshua Smith and Laine Minor from RedHat were probably the most entertaining/fun/funny.&lt;/p&gt;
-&lt;p&gt;If you’re interested, here are my notes for each session I attended and took notes for :). &lt;a href="https://archconf.com/app/member/501/replay" target="_blank" rel="noreferrer noopener"&gt;Replays&lt;/a&gt; (for attendees only)&lt;/p&gt;</description></item><item><title>The Day We Stopped Sprinting</title><link>https://test.markjacobsen.net/2020/02/the-day-we-stopped-sprinting/</link><pubDate>Tue, 11 Feb 2020 04:13:33 +0000</pubDate><guid>https://test.markjacobsen.net/2020/02/the-day-we-stopped-sprinting/</guid><description>&lt;p&gt;An interesting take on a different approach to Agile.&lt;/p&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+ A leveraged worker can out-produce a non-leveraged worker by a factor of one thousand or ten thousand. With a leveraged worker, judgment is far more important than how much time they put in or how hard they work.
+ &lt;/p&gt;
+ &lt;p&gt;
+ For example, a good software engineer, just by writing the right little piece of code and creating the right little application, can literally create half a billion dollars&amp;#8217; worth of value for a company. But ten engineers working ten times as hard, just because they choose the wrong model, the wrong product, wrote it the wrong way, or put it in the wrong viral loop, have basically wasted their time. Inputs don&amp;#8217;t match outputs, especially for leveraged workers.
+ &lt;/p&gt;
+ &lt;p&gt;
+ What you want in life is to be in control of your time. You want to get into a leveraged job where you control your time and you&amp;#8217;re tracked on outputs.
+ &lt;/p&gt;
+&lt;p&gt;&lt;cite&gt;The Almanack of Naval Ravikant&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>ArchConf 2020</title><link>https://test.markjacobsen.net/2020/12/archconf-2020/</link><pubDate>Wed, 16 Dec 2020 18:10:58 +0000</pubDate><guid>https://test.markjacobsen.net/2020/12/archconf-2020/</guid><description>&lt;p&gt;Last week I had the opportunity to “attend” &lt;a href="https://archconf.com/" target="_blank" rel="noreferrer noopener"&gt;ArchConf&lt;/a&gt; (virtually). Of the sessions I attended, Venkat Subramaniam’s presentation of “Building Evolutionary Architectures” was easily the best and combined an engaging and enthusiastic style with useful content. David Sietz’s “Data as a Service (DaaS)” presentation was also very good and applicable for my needs. Aside from that, Joshua Smith and Laine Minor from RedHat were probably the most entertaining/fun/funny.&lt;/p&gt;
+&lt;p&gt;If you’re interested, here are my notes for each session I attended and took notes for :). &lt;a href="https://archconf.com/app/member/501/replay" target="_blank" rel="noreferrer noopener"&gt;Replays&lt;/a&gt; (for attendees only)&lt;/p&gt;
+&lt;h2 id="architecting-cloud-native-applications"&gt;&lt;strong&gt;Architecting Cloud Native Applications&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/ntschutta" target="_blank" rel="noreferrer noopener"&gt;Nathaniel Schutta&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: In order to successfully implement micro-services they must have consistent/good monitoring
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ &lt;a href="https://tanzu.vmware.com/content/ebooks/responsible-microservices-ebook" target="_blank" rel="noreferrer noopener"&gt;Responsible Micro-Services ebook&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Beware of developers implementing technologies/languages/patterns for &amp;#8220;resume driven design&amp;#8221; reasons&amp;#8230; not for the right reasons.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Shared servers are a liability
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://dzone.com/articles/the-12-factor-app-best-practices-in-cloud-native-a" target="_blank" rel="noreferrer noopener"&gt;The 12 Factor App: Best Practices in Cloud Native Applications and Microservices&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ You can consider a service a function because you can spin the number of instances down to zero
+ &lt;/li&gt;
+ &lt;li&gt;
+ Quality Attributes/Requirements = Non Functional Requirements (NFR)&lt;ul&gt;
+ &lt;li&gt;
+ Personally I would really like to see us start using &amp;#8220;Quality Attributes&amp;#8221; or &amp;#8220;Quality Requirements&amp;#8221; instead of NFR.
+ &lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://codesqueeze.com/the-7-software-ilities-you-need-to-know/" target="_blank" rel="noreferrer noopener"&gt;The 7 Software “-ilities” You Need To Know&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://towardsdatascience.com/architecting-for-the-ilities-6fae9d00bf6b" target="_blank" rel="noreferrer noopener"&gt;Architecting For the -ilities&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="http://www.softwarearchitecturenotes.com/architecturerequirements.html" target="_blank" rel="noreferrer noopener"&gt;Architecture Requirements are Ilities&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ You have to consider what ility attributes are important for which stakeholder, and what decisions that results in.
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://www.thoughtworks.com/books/building-evolutionary-architectures" target="_blank" rel="noreferrer noopener"&gt;Evolutionary architecture book&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;microservice = anything that can be re-written in 2 weeks or less&lt;/span&gt;&lt;ul&gt;
+ &lt;li&gt;
+ I really like this definition and goal.
+ &lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ high cohesion, low coupling
+ &lt;/li&gt;
+ &lt;li&gt;
+ A &lt;a href="https://www.jrebel.com/blog/what-is-a-modular-monolith" target="_blank" rel="noreferrer noopener"&gt;Modular Monolith&lt;/a&gt; might be a better approach in certain situations. A modular monolith is a software design approach in which a monolith is designed with an emphasis on interchangeable (and potentially reusable) modules.
+ &lt;/li&gt;
+ &lt;li&gt;
+ If you have to ask what something is (a tech, language, platform), you don&amp;#8217;t need it.
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Monitoring is vital to a thriving microservice arch&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://blog.appoptics.com/the-four-golden-signals-for-monitoring-distributed-systems/" target="_blank" rel="noreferrer noopener"&gt;The Four Golden Signals for Monitoring Distributed Systems&lt;/a&gt;: latency, traffic load, error rate, saturation
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://martinfowler.com/bliki/CircuitBreaker.html" target="_blank" rel="noreferrer noopener"&gt;Circuit Breaker Pattern&lt;/a&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="paved-roads-8211-architecting-for-distributed-teams"&gt;&lt;strong&gt;Paved Roads – Architecting for Distributed Teams&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/ntschutta" target="_blank" rel="noreferrer noopener"&gt;Nathaniel Schutta&lt;/a&gt; – 4/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Any alert someone gets should be informative and actionable. Otherwise, put it on a dashboard or report.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Even when we&amp;#8217;re in person we&amp;#8217;re still communicating remotely (sending IMs, Texts, etc)
+ &lt;/li&gt;
+ &lt;li&gt;
+ Fitness function = todo list from arch to devs
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Review boards don&amp;#8217;t work!&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Just because we can measure it does NOT mean it matters&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ If everything is an option, nothing is an option
+ &lt;/li&gt;
+ &lt;li&gt;
+ Look into &lt;a href="https://spring.io/projects/spring-cloud-contract" target="_blank" rel="noreferrer noopener"&gt;spring cloud contract&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Temporal fitness function = essentially a reminder (ex: Review this code in 1 year)
+ &lt;/li&gt;
+ &lt;li&gt;
+ Keep track of non-decisions/non-goals too (i.e. we don&amp;#8217;t care about X because&amp;#8230;)
+ &lt;/li&gt;
+ &lt;li&gt;
+ Fitness functions should be visible and reviewed at least annually.
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;If you&amp;#8217;re going to get an alert it needs to be informative AND actionable. Just informative goes on a dashboard or report.&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="https://www.thoughtworks.com/radar/byor" target="_blank" rel="noreferrer noopener"&gt;Look into building a &amp;#8220;radar&amp;#8221;&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="http://thoughtworks.com/radar"&gt;thoughtworks.com/radar&lt;/a&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="to-hug-or-to-strangle-tips-for-dealing-with-monolith-pain"&gt;&lt;strong&gt;To Hug or to Strangle: Tips for Dealing with Monolith Pain&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/lainieftw" target="_blank" rel="noreferrer noopener"&gt;Laine Minor&lt;/a&gt; &amp;amp; &lt;a href="https://twitter.com/architect_josh" target="_blank" rel="noreferrer noopener"&gt;Josh Smith&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Consider &amp;#8220;hugging&amp;#8221; (applying micro-service best practices) legacy apps that are too big to strangle
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ pain = the thing that prevents you from doing the part of your job you came/want to do
+ &lt;/li&gt;
+ &lt;li&gt;
+ pain = mental load of things you know are not as they should be
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;You get an architecture whether you plan for it or not&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Long time between delivery is a BUSINESS problem
+ &lt;/li&gt;
+ &lt;li&gt;
+ Biggest benefit of microservices is clean lines
+ &lt;/li&gt;
+ &lt;li&gt;
+ Option 1: strangle, then hug
+ &lt;/li&gt;
+ &lt;li&gt;
+ Option 2: hug, then strangle
+ &lt;/li&gt;
+ &lt;li&gt;
+ Hugging = applying microservice best practices to a monolith (monitoring, etc)
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="developer-to-architect"&gt;&lt;strong&gt;Developer To Architect&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/ntschutta" target="_blank" rel="noreferrer noopener"&gt;Nathaniel Schutta&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Review boards and heavy handed governance doesn&amp;#8217;t work.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Consequences can be positive and negative
+ &lt;/li&gt;
+ &lt;li&gt;
+ Maximizing one minimizes another
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Governance in most orgs is heavyweight, high ceremony&amp;#8230; and it does NOT work&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ SLA vs SLA. The A matters and it indicates a consequence. If there is no consequence its an SLO (Objective)
+ &lt;/li&gt;
+ &lt;li&gt;
+ A reform most often advances via indirection
+ &lt;/li&gt;
+ &lt;li&gt;
+ It&amp;#8217;s not just about the tech. It&amp;#8217;s the relationships
+ &lt;/li&gt;
+ &lt;li&gt;
+ Portfolio architect provides high-level architectural and software engineering expertise to managers and technical staff.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Domain architect : the way he describes it is essentially what we describe as a digital architect
+ &lt;/li&gt;
+ &lt;li&gt;
+ Specifically mentioned TOGAF as a &amp;#8220;meh&amp;#8221; certification
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="sifting-technologies-8211-separating-the-wheat-from-the-chaff"&gt;&lt;strong&gt;Sifting Technologies – Separating the Wheat From the Chaff&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/ntschutta" target="_blank" rel="noreferrer noopener"&gt;Nathaniel Schutta&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;:&amp;nbsp;Consider implementing architectural briefings
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Education isn&amp;#8217;t something you finish
+ &lt;/li&gt;
+ &lt;li&gt;
+ Attention is like real estate. they&amp;#8217;re not making any more of it.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Architectural briefing: why, how, where should/n&amp;#8217;t we use
+ &lt;/li&gt;
+ &lt;li&gt;
+ Not just how much does the thing cost, but how much does it cost to use it (dev, maint, hardware, etc)?
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Speed reduces risk&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ There&amp;#8217;s a difference between a dead tech vs a mature one
+ &lt;/li&gt;
+ &lt;li&gt;
+ Developers are like cats. They&amp;#8217;ll push back just on principle.
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="building-evolutionary-architectures"&gt;&lt;strong&gt;Building Evolutionary Architectures&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/venkat_s" target="_blank" rel="noreferrer noopener"&gt;Venkat Subramaniam&lt;/a&gt; – 5/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Postpone decisions until the last possible moment because it&amp;#8217;s possible YAGNI and doing so lessens the considerations for reversibility. Keep all code as simple as possible.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ UFD =&amp;nbsp;Up Front Design
+ &lt;/li&gt;
+ &lt;li&gt;
+ Now that we&amp;#8217;re &amp;#8220;Agile&amp;#8221; we&amp;#8217;re not doing enough UFD (nor big UFD)
+ &lt;/li&gt;
+ &lt;li&gt;
+ Power point architects = dangerous
+ &lt;/li&gt;
+ &lt;li&gt;
+ Scrum master was never intended to be a title, else there&amp;#8217;s no such thing as a self organizing team
+ &lt;/li&gt;
+ &lt;li&gt;
+ &amp;#8220;adaptive planning&amp;#8221; and &amp;#8220;feedback driven development&amp;#8221; are the most important words for Agile
+ &lt;/li&gt;
+ &lt;li&gt;
+ Rate all features/stories by business value and architectural impact
+ &lt;/li&gt;
+ &lt;li&gt;
+ Goal should be delivering value. Not using a particular tech.
+ &lt;/li&gt;
+ &lt;li&gt;
+ People confuse unfamiliar w/ complex
+ &lt;/li&gt;
+ &lt;li&gt;
+ People confuse familiar with simple
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;reversibility = the ability to back out of a decision (less expensive)&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;postpone decisions until the last responsible moment&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ YAGNI = You Aren&amp;#8217;t Gonna Need It
+ &lt;/li&gt;
+ &lt;li&gt;
+ parsimony = the most minimal solution. &lt;span class="has-inline-color has-vivid-red-color"&gt;Ask &amp;#8220;do we have to&amp;#8221; for everything&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ triangulate = implement 1 way, then another, and abstract common code to Base class
+ &lt;/li&gt;
+ &lt;li&gt;
+ Don&amp;#8217;t START with an abstraction. Refactor into it.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Postel&amp;#8217;s law = be generous about what you receive and conservative about what you send
+ &lt;/li&gt;
+ &lt;li&gt;
+ Good reuse comes from repeated &lt;em&gt;active&lt;/em&gt; use
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Be ruthless in minimizing dependencies&lt;/span&gt; including libraries and frameworks
+ &lt;/li&gt;
+ &lt;li&gt;
+ http://www.agiledeveloper.com/downloads.html
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="core-software-design-principles"&gt;&lt;strong&gt;Core Software Design Principles&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/venkat_s" target="_blank" rel="noreferrer noopener"&gt;Venkat Subramaniam&lt;/a&gt; – 4/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Have the courage to postpone doing things, and when you do, keep it DRY
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ DRY = don&amp;#8217;t repeat yourself
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Violating DRY results in duplication of effort, not just duplication of code&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Manual testing is a violation of DRY
+ &lt;/li&gt;
+ &lt;li&gt;
+ Manual deploy is a violation of DRY
+ &lt;/li&gt;
+ &lt;li&gt;
+ Effort: now &gt; later -&gt; postpone, now == later -&gt; postpone, now &lt; later -&gt; eval probability of needing it
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;We need to have the courage to postpone doing things&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ SRP = single responsibility principle
+ &lt;/li&gt;
+ &lt;li&gt;
+ SLAP = Single Level of Abstraction Principle
+ &lt;/li&gt;
+ &lt;li&gt;
+ Then use the Compose Method Pattern to combine same level SLAPs
+ &lt;/li&gt;
+ &lt;li&gt;
+ OCP = open close principle
+ &lt;/li&gt;
+ &lt;li&gt;
+ Software modules (functions, classes, etc) must be open for extension but closed from modification
+ &lt;/li&gt;
+ &lt;li&gt;
+ LSP = Liskov Substitution Principle
+ &lt;/li&gt;
+ &lt;li&gt;
+ Inheritance should only be used for substitutability and not for reuse
+ &lt;/li&gt;
+ &lt;li&gt;
+ DIY = Dependency Inversion Principle -&gt; class should not depend on another class. Both should depend on abstraction or interface.
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="cloud-integrations-and-data-architecture-for-enterprise-applications"&gt;&lt;strong&gt;Cloud Integrations and Data Architecture for Enterprise Applications&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/rbhardwaj1" target="_blank" rel="noreferrer noopener"&gt;Rohit Bhardwaj&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: The API should come first. Or, when implementing an API for an existing implementation, don&amp;#8217;t model the API on the internal workings of the system.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Application EA -&gt; define our objects, what things they are part of, and the relationships between them
+ &lt;/li&gt;
+ &lt;li&gt;
+ Applications interact with domains and data flows between them
+ &lt;/li&gt;
+ &lt;li&gt;
+ Orchestration services should always queue requests and process/respond async
+ &lt;/li&gt;
+ &lt;li&gt;
+ Lambda is basically serverless (functions)
+ &lt;/li&gt;
+ &lt;li&gt;
+ You might consider using topics/queues for each service instead of load balancer
+ &lt;/li&gt;
+ &lt;li&gt;
+ https://github.com/robertmrk/docker-cometd-demos
+ &lt;/li&gt;
+ &lt;li&gt;
+ Check out &lt;a href="http://cometd.org"&gt;CometD&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Use a correlation id to sync across systems
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;API comes first! Then the implementation.&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="http://schema.org"&gt;schema.org&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ MDM data cleansing: normalize data formats, replace missing values, standardize values, map attributes
+ &lt;/li&gt;
+ &lt;li&gt;
+ Identify sources (producers and consumers of master data) -&gt; collect and analyze metadata -&gt; appt data stewards -&gt; implement data gov program and council -&gt; dev MD model and choose toolset -&gt; Design infra, generate and test MD -&gt; Modify producing and consuming -&gt; implement maint process
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="modeling-for-architects"&gt;&lt;strong&gt;Modeling for Architects&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/ntschutta" target="_blank" rel="noreferrer noopener"&gt;Nathaniel Schutta&lt;/a&gt; – 2/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;:&amp;nbsp;The value in the artifact is not in the artifact itself. It&amp;#8217;s in the conversation it facilitates.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ If the team can&amp;#8217;t understand it, they can&amp;#8217;t build it
+ &lt;/li&gt;
+ &lt;li&gt;
+ It&amp;#8217;s ok to throw out or deprecate a diagram
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;The value in the artifact is not in the artifact itself. It&amp;#8217;s in the conversation it facilitates.&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Component diagrams, deployment diagrams, and sequence diagrams are most common
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="architectural-awareness-engineering-super-skill"&gt;&lt;strong&gt;Architectural Awareness&lt;/strong&gt;: Engineering Super-skill
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/kensipe" target="_blank" rel="noreferrer noopener"&gt;Ken Sipe&lt;/a&gt; – 3/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Question everything. Don&amp;#8217;t be afraid of a little chaos or of making mistakes
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Hardest part of architecting is being aware
+ &lt;/li&gt;
+ &lt;li&gt;
+ awareness = awareness or &lt;em&gt;perception&lt;/em&gt; of a fact
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;chaos breeds creativity&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Dryfus model: novice, advanced beginner (most people in IT industry), competent, proficient, expert
+ &lt;/li&gt;
+ &lt;li&gt;
+ you get what you tolerate
+ &lt;/li&gt;
+ &lt;li&gt;
+ shame and fear are toxic
+ &lt;/li&gt;
+ &lt;li&gt;
+ We shouldn&amp;#8217;t loosely couple everything. We should have it in the right places.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Team strengths: empathy, vulnerable/humble, collaborate/communicate, ability to share vision.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Is your process intentional or not?
+ &lt;/li&gt;
+ &lt;li&gt;
+ &amp;#8220;scrum but&amp;#8230;&amp;#8221; = I want all the benefits but don&amp;#8217;t want to pay for it
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Why are we doing ..x..? Should we do something else? Is it working?&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ context matters&amp;#8230; and context could be foreign
+ &lt;/li&gt;
+ &lt;li&gt;
+ embrace inconsistency
+ &lt;/li&gt;
+ &lt;li&gt;
+ dependencies matter
+ &lt;/li&gt;
+ &lt;li&gt;
+ it&amp;#8217;s a mistake to worry too much about scalability from the start, but also to not think about it at all.
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="architectural-resiliency"&gt;&lt;strong&gt;Architectural Resiliency&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/jtdeane" target="_blank" rel="noreferrer noopener"&gt;Jeremy Deane&lt;/a&gt; – 4/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Need to have ownership to have accountability, and ownership needs to be end to end.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ &lt;a href="https://www.amazon.com/dp/B00IG71FAS/ref=dp-kindle-redirect?_encoding=UTF8&amp;btkr=1" target="_blank" rel="noreferrer noopener"&gt;Threat Modeling book&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;a href="http://openmastery.org" target="_blank" rel="noreferrer noopener"&gt;openmastery.org&lt;/a&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ promote accountability/ownership. No orphans
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Correlate activities. use a tracking id/correlation id&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Do synthetic transactions
+ &lt;/li&gt;
+ &lt;li&gt;
+ Look into &amp;#8220;&lt;a href="https://www.datadoghq.com/" target="_blank" rel="noreferrer noopener"&gt;data dog&lt;/a&gt;&amp;#8221; for dashboarding
+ &lt;/li&gt;
+ &lt;li&gt;
+ Cloud hosting should be multi-region
+ &lt;/li&gt;
+ &lt;li&gt;
+ Security Resiliency: Secure by default, defense in depth, least privilege
+ &lt;/li&gt;
+ &lt;li&gt;
+ Event sourcing
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Postel&amp;#8217;s Law &amp;#8211; Be conservative in what you send, be liberal in what you accept&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Bulkheads. Limit failure exposure.
+ &lt;/li&gt;
+ &lt;li&gt;
+ Validate your input. Sanitize your output.
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Need to have end to end ownership&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ https://prezi.com/mb-vcfp-cry8/architectural-resiliency/
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="architectural-trade-offs"&gt;&lt;strong&gt;Architectural Trade-offs&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/jtdeane" target="_blank" rel="noreferrer noopener"&gt;Jeremy Deane&lt;/a&gt; – 4/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: Be aware that there&amp;#8217;s a trade off (negative) to any choice you make.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ RBAC = Role Based Access Control (ex: AD, Prism)
+ &lt;/li&gt;
+ &lt;li&gt;
+ ABAC = Attribute Based Access Control (context based policies. ex: location based, etc)
+ &lt;/li&gt;
+ &lt;li&gt;
+ Feature Toggles tend to result in technical debt
+ &lt;/li&gt;
+ &lt;li&gt;
+ Blue green results in unnecessary releases
+ &lt;/li&gt;
+ &lt;li&gt;
+ orchestration causes coupling and dependencies
+ &lt;/li&gt;
+ &lt;li&gt;
+ choreography has complexity and needs monitoring
+ &lt;/li&gt;
+ &lt;li&gt;
+ Need to understand the requirements and your domain!
+ &lt;/li&gt;
+ &lt;li&gt;
+ Cloud providers tend to be &amp;#8220;sticky&amp;#8221;. Hard to get out of.
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="how-to-technology-good-8211-tips-for-implementation-at-scale"&gt;&lt;strong&gt;How to Technology Good – Tips for Implementation at Scale&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a href="https://twitter.com/lainieftw" target="_blank" rel="noreferrer noopener"&gt;Laine Minor&lt;/a&gt; &amp;amp; &lt;a href="https://twitter.com/architect_josh" target="_blank" rel="noreferrer noopener"&gt;Josh Smith&lt;/a&gt; – 2/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway&lt;/em&gt;: For good or bad, metrics (or data if you prefer) are needed to promote any tech
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Metrics help build understanding, certainty, and trust
+ &lt;/li&gt;
+ &lt;li&gt;
+ Until you have metrics it&amp;#8217;s a non-starter
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="data-as-a-service-daas"&gt;Data as a Service (DaaS)
+&lt;/h2&gt;&lt;p&gt;David Sietz – 5/5&lt;/p&gt;
+&lt;blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"&gt;
+ &lt;p&gt;
+ &lt;em&gt;Main Takeaway: &lt;/em&gt;Publish data changes to your topics, have microservices consume the data as needed, and version as necessary.
+ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class="wp-block-list"&gt;
+ &lt;li&gt;
+ Data model changes are expensive
+ &lt;/li&gt;
+ &lt;li&gt;
+ Use a NoSQL db
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;Version all data coming in&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Provisioning data: real time, self guided flow, variable load, parallel
+ &lt;/li&gt;
+ &lt;li&gt;
+ Publishing data: real-time, variable endpoints, variable load, managed access
+ &lt;/li&gt;
+ &lt;li&gt;
+ Use a business lens: risks, rewards, volatility
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;ROI is not always monetary&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Last Responsible Moment (LRM)
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;span class="has-inline-color has-vivid-red-color"&gt;There&amp;#8217;s nothing wrong with copying data as long as you understand the intent and retention&lt;/span&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ Build your data marts at the last responsible moment
+ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>The Day We Stopped Sprinting</title><link>https://test.markjacobsen.net/2020/02/the-day-we-stopped-sprinting/</link><pubDate>Tue, 11 Feb 2020 04:13:33 +0000</pubDate><guid>https://test.markjacobsen.net/2020/02/the-day-we-stopped-sprinting/</guid><description>&lt;p&gt;An interesting take on a different approach to Agile.&lt;/p&gt;
 &lt;p&gt;“We get better results faster when we help new agile teams begin with a flow-based approach rather than sprints.”&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.linkedin.com/pulse/day-we-stopped-sprinting-joshua-kerievsky/"&gt;https://www.linkedin.com/pulse/day-we-stopped-sprinting-joshua-kerievsky/&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Stevey’s Google Platforms Rant</title><link>https://test.markjacobsen.net/2020/01/steveys-google-platforms-rant/</link><pubDate>Wed, 29 Jan 2020 02:45:10 +0000</pubDate><guid>https://test.markjacobsen.net/2020/01/steveys-google-platforms-rant/</guid><description>&lt;p&gt;I don’t recall how &lt;a href="https://gist.github.com/chitchcock/1281611"&gt;this gem of an article&lt;/a&gt; came to my attention recently, but even though it is now 8 years old it is still amazingly relavent. If you are at all invovled in writing software I would strongly encourage reading this and taking it to heart.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://gist.github.com/chitchcock/1281611"&gt;https://gist.github.com/chitchcock/1281611&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.linkedin.com/pulse/day-we-stopped-sprinting-joshua-kerievsky/" target="_blank" rel="noopener"
+ &gt;https://www.linkedin.com/pulse/day-we-stopped-sprinting-joshua-kerievsky/&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Stevey’s Google Platforms Rant</title><link>https://test.markjacobsen.net/2020/01/steveys-google-platforms-rant/</link><pubDate>Wed, 29 Jan 2020 02:45:10 +0000</pubDate><guid>https://test.markjacobsen.net/2020/01/steveys-google-platforms-rant/</guid><description>&lt;p&gt;I don’t recall how &lt;a class="link" href="https://gist.github.com/chitchcock/1281611" target="_blank" rel="noopener"
+ &gt;this gem of an article&lt;/a&gt; came to my attention recently, but even though it is now 8 years old it is still amazingly relavent. If you are at all invovled in writing software I would strongly encourage reading this and taking it to heart.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://gist.github.com/chitchcock/1281611" target="_blank" rel="noopener"
+ &gt;https://gist.github.com/chitchcock/1281611&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Selling the Investment to Pay Down Technical Debt: The Code Christmas Tree</title><link>https://test.markjacobsen.net/2019/02/selling-the-investment-to-pay-down-technical-debt-the-code-christmas-tree/</link><pubDate>Tue, 12 Feb 2019 11:50:18 +0000</pubDate><guid>https://test.markjacobsen.net/2019/02/selling-the-investment-to-pay-down-technical-debt-the-code-christmas-tree/</guid><description>&lt;p&gt;I meant to post this over the holidays, but still think it’s relevant. Personally, I like the prominent visual aspect of the idea.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.agilealliance.org/resources/experience-reports/selling-the-investment-to-pay-down-technical-debt-the-code-christmas-tree/" target="_blank" rel="noopener"&gt;Selling the Investment to Pay Down Technical Debt: The Code Christmas Tree | Agile Alliance&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Yes, Cross-functional Teams — but Real Ones!</title><link>https://test.markjacobsen.net/2019/02/yes-cross-functional-teams-but-real-ones/</link><pubDate>Thu, 07 Feb 2019 13:27:36 +0000</pubDate><guid>https://test.markjacobsen.net/2019/02/yes-cross-functional-teams-but-real-ones/</guid><description>&lt;p&gt;As we work through the process this seemed pertinent (emphasis is mine)…&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The next leap is bringing these different units together (not only through the interface of the Product Owner) to &lt;strong&gt;form teams that are actually as knowledgeable about business, contracts, mathematics, sales, marketing, and everything else that is relevant for the company’s value stream as they are in software&lt;/strong&gt;. For the Scrum teams, the leap means that they can’t “hide” behind their backlog or the Product Owner and need to explore and learn about the market, their customers, and the company’s value stream themselves. Basically it means that now the Agile &lt;strong&gt;teams’ focus is beyond software&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Including the version in a Maven artifact</title><link>https://test.markjacobsen.net/2018/09/including-the-version-in-a-maven-artifact/</link><pubDate>Thu, 27 Sep 2018 13:33:00 +0000</pubDate><guid>https://test.markjacobsen.net/2018/09/including-the-version-in-a-maven-artifact/</guid><description>&lt;p&gt;Recently I wanted to include the version of an artifact generated by a Maven build into a text file in that artifact. As Google and and good friends will help you with, I was pointed to &lt;a href="https://stackoverflow.com/questions/3532135/using-maven-to-output-the-version-number-to-a-text-file"&gt;this article&lt;/a&gt; that was exactly what I wanted.&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;The next leap is bringing these different units together (not only through the interface of the Product Owner) to &lt;strong&gt;form teams that are actually as knowledgeable about business, contracts, mathematics, sales, marketing, and everything else that is relevant for the company’s value stream as they are in software&lt;/strong&gt;. For the Scrum teams, the leap means that they can’t “hide” behind their backlog or the Product Owner and need to explore and learn about the market, their customers, and the company’s value stream themselves. Basically it means that now the Agile &lt;strong&gt;teams’ focus is beyond software&lt;/strong&gt;.&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://www.agilealliance.org/yes-cross-functional-teams-but-real-ones/" target="_blank" rel="noopener"&gt;Yes, Cross-functional Teams — but Real Ones!&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Including the version in a Maven artifact</title><link>https://test.markjacobsen.net/2018/09/including-the-version-in-a-maven-artifact/</link><pubDate>Thu, 27 Sep 2018 13:33:00 +0000</pubDate><guid>https://test.markjacobsen.net/2018/09/including-the-version-in-a-maven-artifact/</guid><description>&lt;p&gt;Recently I wanted to include the version of an artifact generated by a Maven build into a text file in that artifact. As Google and and good friends will help you with, I was pointed to &lt;a class="link" href="https://stackoverflow.com/questions/3532135/using-maven-to-output-the-version-number-to-a-text-file" target="_blank" rel="noopener"
+ &gt;this article&lt;/a&gt; that was exactly what I wanted.&lt;/p&gt;
 &lt;p&gt;Basically, create a /src/main/resources/version.txt file with the following content…&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;${project.version}
 &lt;/code&gt;&lt;/pre&gt;
@@ -48,7 +687,8 @@ Then, be sure to expose your secrets in the “environment:” section of your d
  &amp;lt;/resources&amp;gt;
 &amp;lt;/build&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Lean or Agile? Why choose when you can have it all? The power of applying Agile with a Lean mindset</title><link>https://test.markjacobsen.net/2018/04/lean-or-agile-why-choose-when-you-can-have-it-all-the-power-of-applying-agile-with-a-lean-mindset/</link><pubDate>Fri, 13 Apr 2018 11:15:00 +0000</pubDate><guid>https://test.markjacobsen.net/2018/04/lean-or-agile-why-choose-when-you-can-have-it-all-the-power-of-applying-agile-with-a-lean-mindset/</guid><description>&lt;p&gt;Interesting article. I have the book queued up for perusal. If you have a subscription to Safari Books you can read it too!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Lean or Agile? Why choose when you can have it all? The power of applying Agile with a Lean mindset</title><link>https://test.markjacobsen.net/2018/04/lean-or-agile-why-choose-when-you-can-have-it-all-the-power-of-applying-agile-with-a-lean-mindset/</link><pubDate>Fri, 13 Apr 2018 11:15:00 +0000</pubDate><guid>https://test.markjacobsen.net/2018/04/lean-or-agile-why-choose-when-you-can-have-it-all-the-power-of-applying-agile-with-a-lean-mindset/</guid><description>&lt;p&gt;Interesting article. I have the book queued up for perusal. If you have a subscription to Safari Books you can read it too!&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.linkedin.com/pulse/lean-agile-why-choose-when-you-can-have-all-power-medina-d%C3%ADaz/" target="_blank" rel="noopener"&gt;Lean or Agile? Why choose when you can have it all? The power of applying Agile with a Lean mindset&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>All Code Is Bad, So Don’t Stress If Yours Sucks</title><link>https://test.markjacobsen.net/2018/02/code-bad-dont-stress-sucks/</link><pubDate>Wed, 14 Feb 2018 14:38:00 +0000</pubDate><guid>https://test.markjacobsen.net/2018/02/code-bad-dont-stress-sucks/</guid><description>&lt;p&gt;Some funny for my developer friends. If you don’t program for a living, just ignore everything in these articles because you will become convinced the world will implode shortly. On the other hand, if you do program I’m pretty sure you’ll love this…&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.stilldrinking.org/programming-sucks" target="_blank" rel="noopener"&gt;Read the full article here&lt;/a&gt;, or… &lt;a href="https://lifehacker.com/all-code-is-bad-so-dont-stress-if-yours-sucks-1569821801" target="_blank" rel="noopener"&gt;check out the summary&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
@@ -69,7 +709,10 @@ guy
 &lt;pre&gt;&lt;code&gt;^(.*?)$\s+?^(?=.*^\1$)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Just replace with a zero length string.&lt;/p&gt;
-&lt;p&gt;If you’d like to read up on the details I &lt;a href="http://stackoverflow.com/questions/3958350/removing-duplicate-rows-in-notepad" target="_blank"&gt;found this tip here&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;</description></item><item><title>The Male Dominated Field of Programming #1aDay</title><link>https://test.markjacobsen.net/2014/04/the-male-dominated-field-of-programming/</link><pubDate>Mon, 28 Apr 2014 12:14:00 +0000</pubDate><guid>https://test.markjacobsen.net/2014/04/the-male-dominated-field-of-programming/</guid><description>&lt;img decoding="async" src="http://bit.ly/1lNcKrs" alt="" /&gt;
+&lt;p&gt;If you’d like to read up on the details I &lt;a href="http://stackoverflow.com/questions/3958350/removing-duplicate-rows-in-notepad" target="_blank"&gt;found this tip here&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>The Male Dominated Field of Programming #1aDay</title><link>https://test.markjacobsen.net/2014/04/the-male-dominated-field-of-programming/</link><pubDate>Mon, 28 Apr 2014 12:14:00 +0000</pubDate><guid>https://test.markjacobsen.net/2014/04/the-male-dominated-field-of-programming/</guid><description>&lt;img decoding="async" src="http://bit.ly/1lNcKrs" alt="" /&gt;
 &lt;p&gt;Apparently only around 20% to 30% of currently working programmers are female, and in my experience it seems to be closer to 20% than 30%. Still, the post raises some important points especially about behavior.&lt;/p&gt;
 &lt;p&gt;I want my girls to be able to do anything they are capable of and interested in just like I wish the same for any boy.&lt;/p&gt;
-&lt;p&gt;Still, regarding the cartoon, I half wonder if the person has ever watched a girl play with a doll. There is more going on in a 5 minute session than I can keep track of when I watch my girls with their dolls… And yes, they also love the “&lt;a href="https://test.markjacobsen.net/hardware/ipad/" target="_blank"&gt;ipad&lt;/a&gt;” (aka &lt;a href="https://test.markjacobsen.net/hardware/kindle-fire/" target="_blank"&gt;Kindle Fire&lt;/a&gt;).&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Still, regarding the cartoon, I half wonder if the person has ever watched a girl play with a doll. There is more going on in a 5 minute session than I can keep track of when I watch my girls with their dolls… And yes, they also love the “&lt;a href="https://test.markjacobsen.net/hardware/ipad/" target="_blank"&gt;ipad&lt;/a&gt;” (aka &lt;a href="https://test.markjacobsen.net/hardware/kindle-fire/" target="_blank"&gt;Kindle Fire&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://bit.ly/1ihYjs1" target="_blank"&gt;Read the full article here&lt;/a&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

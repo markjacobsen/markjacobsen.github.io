@@ -1,2 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows Batch on MarkJacobsen.net</title><link>https://test.markjacobsen.net/categories/windows-batch/</link><description>Recent content in Windows Batch on MarkJacobsen.net</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 04 Jul 2025 12:14:00 +0000</lastBuildDate><atom:link href="https://test.markjacobsen.net/categories/windows-batch/index.xml" rel="self" type="application/rss+xml"/><item><title>Drip files one at a time for processing with a Windows batch script</title><link>https://test.markjacobsen.net/2025/07/drip-files-one-at-a-time-for-processing-with-a-windows-batch-script/</link><pubDate>Fri, 04 Jul 2025 12:14:00 +0000</pubDate><guid>https://test.markjacobsen.net/2025/07/drip-files-one-at-a-time-for-processing-with-a-windows-batch-script/</guid><description>&lt;p&gt;Ever have a collection of files that you need to send off to something else for processing, but need to process the files one at a time waiting for the completion of each (signaled by a file’s existence because you have no hook to the return code of the originating process) before continuing with the next?&lt;/p&gt;
-&lt;p&gt;No? Just me? 🤣 Anyway, here’s a script that takes an array of files, copies them to a directory for a different app to process, waits for that process to end (by looking for the file with a done extension added) before continuing on with the next.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows Batch on MarkJacobsen.net</title><link>https://test.markjacobsen.net/categories/windows-batch/</link><description>Recent content in Windows Batch on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 04 Jul 2025 12:14:00 +0000</lastBuildDate><atom:link href="https://test.markjacobsen.net/categories/windows-batch/index.xml" rel="self" type="application/rss+xml"/><item><title>Drip files one at a time for processing with a Windows batch script</title><link>https://test.markjacobsen.net/2025/07/drip-files-one-at-a-time-for-processing-with-a-windows-batch-script/</link><pubDate>Fri, 04 Jul 2025 12:14:00 +0000</pubDate><guid>https://test.markjacobsen.net/2025/07/drip-files-one-at-a-time-for-processing-with-a-windows-batch-script/</guid><description>&lt;p&gt;Ever have a collection of files that you need to send off to something else for processing, but need to process the files one at a time waiting for the completion of each (signaled by a file’s existence because you have no hook to the return code of the originating process) before continuing with the next?&lt;/p&gt;
+&lt;p&gt;No? Just me? 🤣 Anyway, here’s a script that takes an array of files, copies them to a directory for a different app to process, waits for that process to end (by looking for the file with a done extension added) before continuing on with the next.&lt;/p&gt;
+&lt;pre class="wp-block-code"&gt;&lt;code&gt;@echo off
+setlocal enabledelayedexpansion
+
+set IMPORTDIR=X:\App\Process\
+
+rem List your files here (one per line)
+set FILES&amp;#91;0]=X:\Data\File1.csv
+set FILES&amp;#91;1]=X:\Data\File2.csv
+set FILES&amp;#91;2]=X:\Data\File3.csv
+
+rem Set the number of files
+set NUMFILES=3
+
+set SLEEP_SECONDS=5
+
+for /L %%I in (0,1,%NUMFILES%-1) do (
+    call :WAITLOOP "!FILES&amp;#91;%%I]!"
+)
+
+echo All files processed.
+exit /b
+
+:WAITLOOP
+rem Get the base name (without extension) and directory
+set "FULLFILE=%~1"
+set "BASEDIR=%~dp1"
+set "BASENAME=%~n1"
+
+if "%BASENAME%"=="" (
+    rem This is important so we actually terminate
+    goto :EOF
+)
+
+rem Compose the .done filename
+set "DONEFILE=%IMPORTDIR%%BASENAME%.csv.done"
+
+if exist "%DONEFILE%" (
+    echo Removing previous done file.
+    del "%DONEFILE%"
+)
+
+copy "%FULLFILE%" "%IMPORTDIR%%BASENAME%.csv"
+
+:LOOP
+if exist "%DONEFILE%" (
+    echo File found: %DONEFILE%
+    goto :EOF
+) else (
+    echo Waiting for file: %DONEFILE%
+    timeout /t %SLEEP_SECONDS% /nobreak &gt;nul
+    goto LOOP
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Just update the details as needed, but the above is tested and works!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

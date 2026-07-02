@@ -1,2 +1,297 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gmail on MarkJacobsen.net</title><link>https://test.markjacobsen.net/tags/gmail/</link><description>Recent content in Gmail on MarkJacobsen.net</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 12 Mar 2013 16:29:37 +0000</lastBuildDate><atom:link href="https://test.markjacobsen.net/tags/gmail/index.xml" rel="self" type="application/rss+xml"/><item><title>Gmail Snooze Script – We Don’t Need No Stinkin MailboxApp</title><link>https://test.markjacobsen.net/2013/03/gmail-snooze-script/</link><pubDate>Tue, 12 Mar 2013 16:29:37 +0000</pubDate><guid>https://test.markjacobsen.net/2013/03/gmail-snooze-script/</guid><description>&lt;p&gt;I’ll admit it. I got caught up in the MailboxApp fever and watched the little counter until I could get my hands on the app. Then I did and realized I didn’t particularly care for the interface or for giving up credentials to yet another service (though I do have 2 factor authentication setup). I like the Gmail interface. I think it’s done well. And I want control. So I asked that question that every engineer asks: “How can I do this better?”. Naturally the answer was smacking me in the face. Maybe a year ago I came across a Gmail snooze script, but didn’t really take the time to understand it or tweak it to my needs. This time was different.&lt;/p&gt;</description></item><item><title>Inbox Zero – How I do it</title><link>https://test.markjacobsen.net/2013/02/inbox-zero-how-i-do-it/</link><pubDate>Tue, 05 Feb 2013 09:19:35 +0000</pubDate><guid>https://test.markjacobsen.net/2013/02/inbox-zero-how-i-do-it/</guid><description>&lt;p&gt;Why is it that when I mention I have no email in my inbox or that I just delete email I get these looks and comments of complete disbelief? Probably my two favorite comments are “How can you possibly do that?” and “You must not do anything.”&lt;/p&gt;
-&lt;p&gt;Well, I’m here to tell you that you can do it and that you can actually get stuff done. While there are a ton of ways to do this and you might want to tweak your implementation a little bit, I’m going to give you a run down of how I do it.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gmail on MarkJacobsen.net</title><link>https://test.markjacobsen.net/tags/gmail/</link><description>Recent content in Gmail on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 12 Mar 2013 16:29:37 +0000</lastBuildDate><atom:link href="https://test.markjacobsen.net/tags/gmail/index.xml" rel="self" type="application/rss+xml"/><item><title>Gmail Snooze Script – We Don’t Need No Stinkin MailboxApp</title><link>https://test.markjacobsen.net/2013/03/gmail-snooze-script/</link><pubDate>Tue, 12 Mar 2013 16:29:37 +0000</pubDate><guid>https://test.markjacobsen.net/2013/03/gmail-snooze-script/</guid><description>&lt;p&gt;I’ll admit it. I got caught up in the MailboxApp fever and watched the little counter until I could get my hands on the app. Then I did and realized I didn’t particularly care for the interface or for giving up credentials to yet another service (though I do have 2 factor authentication setup). I like the Gmail interface. I think it’s done well. And I want control. So I asked that question that every engineer asks: “How can I do this better?”. Naturally the answer was smacking me in the face. Maybe a year ago I came across a Gmail snooze script, but didn’t really take the time to understand it or tweak it to my needs. This time was different.&lt;/p&gt;
+&lt;p&gt;Below you’ll find the setup instructions that will give you MailboxApp like functionality in something you completely control and that you can use from any email client. Just attach labels or move your messages to the any of the snooze labels and let the script do the rest. Personally, I’m using the script with a &lt;a href="https://test.markjacobsen.net/apps/dispatch/" target="_blank"&gt;Dispatch&lt;/a&gt; “quick action” to easily triage my inbox.&lt;/p&gt;
+&lt;p&gt;See the “Setup” instructions in the comment block at the top of the code or refer to the images below…&lt;/p&gt;
+&lt;img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-254" alt="gdrive-create-script" src="https://i0.wp.com/visit.markjacobsen.net/wp-content/uploads/2013/03/gdrive-create-script.png?resize=447%2C252" width="447" height="252" srcset="https://i0.wp.com/markjacobsen.net/wp-content/uploads/2013/03/gdrive-create-script.png?w=447&amp;ssl=1 447w, https://i0.wp.com/markjacobsen.net/wp-content/uploads/2013/03/gdrive-create-script.png?resize=300%2C169&amp;ssl=1 300w" sizes="auto, (max-width: 447px) 100vw, 447px" /&gt; 
+&lt;img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-253" alt="gdrive-blank-project" src="https://i0.wp.com/visit.markjacobsen.net/wp-content/uploads/2013/03/gdrive-blank-project.png?resize=265%2C135" width="265" height="135" /&gt; 
+&lt;p&gt;Paste the code from below into the script&lt;/p&gt;
+&lt;p&gt;&lt;img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-255" alt="gdrive-run-function" src="https://i0.wp.com/visit.markjacobsen.net/wp-content/uploads/2013/03/gdrive-run-function.png?resize=197%2C79" width="197" height="79" /&gt;  &lt;img data-recalc-dims="1" loading="lazy" decoding="async" class="alignnone size-full wp-image-256" alt="gdrive-trigger-setup" src="https://i0.wp.com/visit.markjacobsen.net/wp-content/uploads/2013/03/gdrive-trigger-setup.png?resize=474%2C201" width="474" height="201" srcset="https://i0.wp.com/markjacobsen.net/wp-content/uploads/2013/03/gdrive-trigger-setup.png?w=873&amp;ssl=1 873w, https://i0.wp.com/markjacobsen.net/wp-content/uploads/2013/03/gdrive-trigger-setup.png?resize=300%2C127&amp;ssl=1 300w, https://i0.wp.com/markjacobsen.net/wp-content/uploads/2013/03/gdrive-trigger-setup.png?resize=500%2C212&amp;ssl=1 500w" sizes="auto, (max-width: 474px) 100vw, 474px" /&gt;&lt;/p&gt;
+&lt;p&gt;To use the functionality provided by the script just move any email to one of the snooze labels. For example, Move to –&amp;gt; _Z/Tonight to have the email reappear at the time you selected (default: 5pm). These are the suggested options to use, but there are more specific labels you can use for tighter control:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;_Z/Later&lt;/li&gt;
+&lt;li&gt;_Z/Midnight&lt;/li&gt;
+&lt;li&gt;_Z/Noon&lt;/li&gt;
+&lt;li&gt;_Z/Tonight&lt;/li&gt;
+&lt;li&gt;_Z/Tomorrow&lt;/li&gt;
+&lt;li&gt;_Z/This Weekend&lt;/li&gt;
+&lt;li&gt;_Z/Next Week&lt;/li&gt;
+&lt;li&gt;_Z/Next Month&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I hope you like it!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*
+* Author: Mark Jacobsen (http://mjg2.net/code)
+*
+* This is a massively modified and more powerful GMail snooze script that mirrors much of the functionality of
+* the iPhone &amp;quot;Mailbox&amp;quot; app with the added benefit of not having to hand over your credentials, and being able to 
+* use from any mail client (web, Android, iPhone, etc). If you like it or have suggestions, please drop me a line
+* from my blog at http://mjg2.net/code
+*
+* Setup:
+* 1) Fill in the values below (or just use the defaults)
+* 2) Run the &amp;quot;setup()&amp;quot; function using the method drop down and run arrow
+* 3) Set time based triggers for:
+* moveDailySnoozes() - Daily between Midnight to 1 am
+* moveHourlySnoozes() - Every 5 minutes
+*
+* Changes:
+* 2013-05-06 markjacobsen.net Fixed getLabelForHour to correctly handle am/pm thanks to &amp;quot;benlarge&amp;quot;
+* 2014-02-23 markjacobsen.net Fixed moveDailySnoozes to correctly handle the current DOW thanks to &amp;quot;Jeff Hirsch&amp;quot;
+* 2014-03-24 markjacobsen.net Added additional parseInt()s to moveHourlySnoozes
+*/
+
+// =============================================================================
+// Set these values according to your needs
+// =============================================================================
+var TIMEZONE = &amp;quot;America/Detroit&amp;quot;; // Your timezone
+var TONIGHT_HOUR = 17; // Hour (on a 24 hour clock. ex: 17=5pm) representing when something snoozed until &amp;quot;Tonight&amp;quot; should reappear
+var HOURS_UNTIL_LATER = 3; // Number of hours when something snoozed until &amp;quot;Later&amp;quot; should appear
+var REAPPEAR_LABEL = &amp;quot;_Action&amp;quot;; // Full label path to apply when a message reappears in the inbox (leave blank &amp;quot;&amp;quot; to not set a label)
+var REAPPEAR_UNREAD = true; // Decide if you want to mark a thread as unread when it reappears in the inbox
+
+// ==========================================================================================
+// I wouldn't recommend changing these values but it shouldn't hurt anything if done right :)
+// ==========================================================================================
+var LABEL_BASE = &amp;quot;_Z&amp;quot;; // The label to create all snooze labels under (it's suggested that you don't change this)
+var LABEL_BASE_DOW = LABEL_BASE + &amp;quot;/zDay&amp;quot;;
+var LABEL_BASE_MO = LABEL_BASE + &amp;quot;/zMonth&amp;quot;;
+var LABEL_BASE_TOD = LABEL_BASE + &amp;quot;/zTime&amp;quot;;
+
+// =============================================================================
+// =============================================================================
+// Do NOT change anything below here
+// =============================================================================
+// =============================================================================
+var LABEL_LATER = LABEL_BASE + &amp;quot;/Later&amp;quot;;
+var LABEL_MIDNIGHT = LABEL_BASE + &amp;quot;/Midnight&amp;quot;;
+var LABEL_NOON = LABEL_BASE + &amp;quot;/Noon&amp;quot;;
+var LABEL_TONIGHT = LABEL_BASE + &amp;quot;/Tonight&amp;quot;;
+var LABEL_TOMORROW = LABEL_BASE + &amp;quot;/Tomorrow&amp;quot;;
+var LABEL_THIS_WEEKEND = LABEL_BASE + &amp;quot;/This Weekend&amp;quot;;
+var LABEL_NEXT_WEEK = LABEL_BASE + &amp;quot;/Next Week&amp;quot;;
+var LABEL_NEXT_MONTH = LABEL_BASE + &amp;quot;/Next Month&amp;quot;;
+
+
+function setup() {
+ GmailApp.createLabel(LABEL_BASE);
+ GmailApp.createLabel(LABEL_BASE_DOW);
+ GmailApp.createLabel(LABEL_BASE_MO);
+ GmailApp.createLabel(LABEL_BASE_TOD);
+ GmailApp.createLabel(LABEL_NEXT_WEEK);
+ GmailApp.createLabel(LABEL_NEXT_MONTH);
+ GmailApp.createLabel(LABEL_LATER);
+ GmailApp.createLabel(LABEL_MIDNIGHT);
+ GmailApp.createLabel(LABEL_NOON);
+ GmailApp.createLabel(LABEL_TONIGHT);
+ GmailApp.createLabel(LABEL_TOMORROW);
+ GmailApp.createLabel(LABEL_THIS_WEEKEND);
+ GmailApp.createLabel(getLabelForDayOfWeek(&amp;quot;Sunday&amp;quot;));
+ GmailApp.createLabel(getLabelForDayOfWeek(&amp;quot;Monday&amp;quot;));
+ GmailApp.createLabel(getLabelForDayOfWeek(&amp;quot;Tuesday&amp;quot;));
+ GmailApp.createLabel(getLabelForDayOfWeek(&amp;quot;Wednesday&amp;quot;));
+ GmailApp.createLabel(getLabelForDayOfWeek(&amp;quot;Thursday&amp;quot;));
+ GmailApp.createLabel(getLabelForDayOfWeek(&amp;quot;Friday&amp;quot;));
+ GmailApp.createLabel(getLabelForDayOfWeek(&amp;quot;Saturday&amp;quot;));
+ 
+ // Time of day Labels
+ for (var i = 0; i &amp;lt;= 23; ++i) {
+ GmailApp.createLabel(getLabelForHour(i));
+ }
+ 
+ // Month Labels
+ for (var i = 0; i &amp;lt;= 11; ++i) {
+ GmailApp.createLabel(getLabelForMonth(i));
+ }
+}
+
+function test(){
+ Logger.log(getLabelForHour(0));
+ Logger.log(getLabelForHour(12));
+ Logger.log(getLabelForHour(13));
+ Logger.log(getLabelForHour(23));
+}
+
+function getLabelForHour(hr){
+ var ampm = &amp;quot;am&amp;quot;;
+ if (hr &amp;gt; 12)
+ {
+ hr -= 12;
+ ampm = &amp;quot;pm&amp;quot;;
+ }
+ else if (hr == 12)
+ {
+ ampm = &amp;quot;pm&amp;quot;;
+ }
+ else if (hr == 0)
+ {
+ hr = 12;
+ ampm = &amp;quot;am&amp;quot;;
+ }
+ return LABEL_BASE_TOD + &amp;quot;/&amp;quot; + parseInt(hr) + ampm;
+}
+
+function getLabelForMonth(mo){
+ var tmp;
+ 
+ if (mo == -1){
+ tmp = new Date();
+ }else{
+ tmp = new Date(2000, mo, 1);
+ }
+ return LABEL_BASE_MO + &amp;quot;/&amp;quot; + Utilities.formatDate(tmp, TIMEZONE, &amp;quot;MMMMM&amp;quot;);
+}
+
+function getLabelForDayOfWeek(dow){
+ return LABEL_BASE_DOW + &amp;quot;/&amp;quot; + dow;
+}
+
+
+function moveDailySnoozes() {
+ var dow, dom, mo;
+ 
+ // Move anything that was snoozed until tomorrow
+ moveSnoozesToInbox(LABEL_TOMORROW);
+ 
+ dow = Utilities.formatDate(new Date(), TIMEZONE, &amp;quot;EEEE&amp;quot;);
+ dom = Utilities.formatDate(new Date(), TIMEZONE, &amp;quot;d&amp;quot;);
+ 
+ // Move anything that was snoozed until this DOW
+ moveSnoozesToInbox(getLabelForDayOfWeek(dow));
+ 
+ if ((dow == &amp;quot;Sunday&amp;quot;) || (dow == &amp;quot;Saturday&amp;quot;)){
+ // If something was snoozed until this weekend, that should be moved too
+ moveSnoozesToInbox(LABEL_THIS_WEEKEND);
+ }
+ 
+ // Move anything for &amp;quot;next week&amp;quot; to the DOW it should come off snooze (i.e. the current DOW).
+ // This works and doesn't move the messages pre-maturely because we moved
+ // msgs for the DOW, prior to this and this functions should only fire
+ // once a day
+ moveSnoozes(LABEL_NEXT_WEEK, getLabelForDayOfWeek(dow));
+ 
+ if (dom == 1){
+ // Move anything snoozed until &amp;quot;next month&amp;quot; or
+ // specifically for the current month on the 1st day
+ // of a new month
+ moveSnoozesToInbox(getLabelForMonth(-1));
+ moveSnoozesToInbox(LABEL_NEXT_MONTH);
+ }
+}
+
+function moveHourlySnoozes() {
+ var curHour, curHourLabel, hourForLater, curDateTime;
+ 
+ curHour = Utilities.formatDate(new Date(), TIMEZONE, &amp;quot;H&amp;quot;);
+ curHourLabel = getLabelForHour(curHour);
+ 
+ moveSnoozes(LABEL_NOON, getLabelForHour(12));
+ moveSnoozes(LABEL_MIDNIGHT, getLabelForHour(0));
+ 
+ if (parseInt(curHour) == parseInt(TONIGHT_HOUR)){
+ moveSnoozesToInbox(LABEL_TONIGHT);
+ }
+ 
+ moveSnoozesToInbox(curHourLabel);
+ 
+ hourForLater = parseInt(parseInt(curHour) + HOURS_UNTIL_LATER);
+ if (hourForLater &amp;gt;= 24){
+ hourForLater = parseInt(hourForLater - 24);
+ }
+ moveSnoozes(LABEL_LATER, getLabelForHour(hourForLater));
+}
+
+
+function moveSnoozesToInbox(oldLabelName) {
+ var oldLabel, page, reappearLabel;
+ oldLabel = GmailApp.getUserLabelByName(oldLabelName);
+ page = null;
+ // Get threads in &amp;quot;pages&amp;quot; of 100 at a time
+ while(!page || page.length == 100) {
+ page = oldLabel.getThreads(0, 100);
+ if (page.length &amp;gt; 0) {
+ GmailApp.moveThreadsToInbox(page);
+ oldLabel.removeFromThreads(page);
+ if (REAPPEAR_LABEL != &amp;quot;&amp;quot;){
+ reappearLabel = GmailApp.getUserLabelByName(REAPPEAR_LABEL);
+ reappearLabel.addToThreads(page);
+ }
+ if (REAPPEAR_UNREAD == true){
+ GmailApp.markThreadsUnread(page);
+ }
+ } 
+ }
+}
+
+
+function moveSnoozes(oldLabelName, newLabelName) {
+ var oldLabel, newLabel, page;
+ oldLabel = GmailApp.getUserLabelByName(oldLabelName);
+ newLabel = GmailApp.getUserLabelByName(newLabelName);
+ page = null;
+ // Get threads in &amp;quot;pages&amp;quot; of 100 at a time
+ while(!page || page.length == 100) {
+ page = oldLabel.getThreads(0, 100);
+ if (page.length &amp;gt; 0) {
+ newLabel.addToThreads(page);
+ oldLabel.removeFromThreads(page);
+ } 
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Inbox Zero – How I do it</title><link>https://test.markjacobsen.net/2013/02/inbox-zero-how-i-do-it/</link><pubDate>Tue, 05 Feb 2013 09:19:35 +0000</pubDate><guid>https://test.markjacobsen.net/2013/02/inbox-zero-how-i-do-it/</guid><description>&lt;p&gt;Why is it that when I mention I have no email in my inbox or that I just delete email I get these looks and comments of complete disbelief? Probably my two favorite comments are “How can you possibly do that?” and “You must not do anything.”&lt;/p&gt;
+&lt;p&gt;Well, I’m here to tell you that you can do it and that you can actually get stuff done. While there are a ton of ways to do this and you might want to tweak your implementation a little bit, I’m going to give you a run down of how I do it.&lt;/p&gt;
+&lt;p&gt;Ok, so how do you go about implementing inbox zero? First, create a new folder (Outlook) or label (Gmail) called “_oldCrapCloggingMyInbox”. Second, move all the email in your inbox into “_oldCrapCloggingMyInbox”. There, don’t you feel better already?&lt;/p&gt;
+&lt;p&gt;Now, repeat after me…&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Delete&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delegate&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Defer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delete&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delegate&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Defer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delete&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delegate&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Defer&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Got it yet? No? One more time then…&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Delete&lt;/li&gt;
+&lt;li&gt;Delegate&lt;/li&gt;
+&lt;li&gt;Do&lt;/li&gt;
+&lt;li&gt;Defer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ok, those are the 4 questions you need to ask yourself (in that order) for every email. Now you’re going to start honing your “deleteability”. Seriously, don’t be afraid of deleting email (if you’re really paranoid, replace delete with archive”).&lt;/p&gt;
+&lt;p&gt;Can I just delete this? If so, delete it. It’s liberating isn’t it?&lt;/p&gt;
+&lt;p&gt;If you can’t delete it, can or should someone else be doing it? If so, send it on its way and delete it.&lt;/p&gt;
+&lt;p&gt;If it’s something you have to do you have a decision to make. If it’s something you can do in 2 minutes or less – do it! Then delete it! If you can’t do it in 2 minutes or less either put it on a task list or move it to a “Read Review” folder/label. Naturally, if you put it on a task list – delete it.&lt;/p&gt;
+&lt;p&gt;Doesn’t that feel so much better?&lt;/p&gt;
+&lt;p&gt;Now, this may feel a little weird and it will take some getting used to, but practice it over the next few weeks and see if it doesn’t feel great to have an empty inbox.&lt;/p&gt;
+&lt;p&gt;You might also want to watch the &lt;a href="http://www.43folders.com/izero#video" target="_blank"&gt;original presentation&lt;/a&gt; by Merlin Mann.&lt;/p&gt;
+&lt;p&gt;Questions? Still think I’m crazy? Sound off in the comments.&lt;em&gt;Please remember to subscribe to the &lt;a href="https://markjacobsen.net/newsletter" target="_blank"&gt;newsletter&lt;/a&gt; or &lt;a href="https://markjacobsen.net/feed" target="_blank"&gt;feed&lt;/a&gt; to stay up to date!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don&amp;rsquo;t link to anything I don&amp;rsquo;t use myself.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
