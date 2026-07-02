@@ -3,4 +3,54 @@
 <span>Archives</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
 <span>Search</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
 <svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<span>Dark Mode</span></li></ol></li></ol></aside><main class="main full-width"></main></div><script type=text/javascript src=/ts/main.1ff1e5fdc4e178ed422e50aa407526dc552f26342d729343fded19416194382c.js defer></script></body></html>
+<span>Dark Mode</span></li></ol></li></ol></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/db2/ style=background-color:#beefc0;color:#0f3d12>DB2</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/2014/03/when-was-a-db2-table-created-and-by-who/>When Was a DB2 Table Created and by Who?</a></h2></div><footer class=article-meta><div class=inline-meta><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2014-03-27T07:08:00Z>Thursday, March 27, 2014</time>
+<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>1 minute read</time></div></footer></div></header><section class=article-content><p>This little bit of SQL should help you determine who created a table or when it was created…</p><pre><code>SELECT 
+CASE TAB.TYPE 
+WHEN 'A' THEN 'Alias' 
+WHEN 'N' THEN 'Nickname' 
+WHEN 'S' THEN 'MQT' 
+WHEN 'T' THEN 'Table' 
+WHEN 'V' THEN 'View' 
+ELSE 'OTHER: '||TAB.TYPE 
+END AS T_TYPE 
+,RTRIM(TAB.TABSCHEMA)||'.'||TAB.TABNAME AS TABLE_NAME 
+,DATE(CREATE_TIME) AS CREATED 
+,DATE(ALTER_TIME) AS ALTERED 
+,TAB.COLCOUNT AS COLUMNS 
+,TAB.DEFINER AS CREATED_BY 
+FROM SYSCAT.TABLES TAB 
+WHERE TABSCHEMA = 'XX' 
+ORDER BY TABLE_NAME 
+FOR READ ONLY 
+WITH UR;&lt;/pre&gt;
+&lt;p&gt;_Please remember to subscribe to the &lt;a href=&quot;https://markjacobsen.net/newsletter&quot; target=&quot;_blank&quot;&gt;newsletter&lt;/a&gt; or &lt;a href=&quot;https://markjacobsen.net/feed&quot; target=&quot;_blank&quot;&gt;feed&lt;/a&gt; to stay up to date!_&lt;/p&gt;
+
+
+_&lt;small&gt;Disclaimer: Thoughts and opinions are my own, and do not reflect the views of any employer, family member, friend, or anyone else. Some links may be affiliate links, but I don't link to anything I don't use myself.&lt;/small&gt;_
+</code></pre></section><footer class="article-meta article-footer"><section class=article-tags><a href=/tags/sql/>SQL</a></section></footer></article><aside><h2 class=section-title>Related content</h2><div class=subsection-list><div class=article-list--tile><article><a href=/2014/03/find-db2-fields-containing-carriage-returns-line-feeds-or-both-crlf/><div class=article-details><h2 class=article-title>Find DB2 Fields Containing Carriage Returns, Line Feeds, or Both CRLF</h2></div></a></article><article><a href=/2014/03/find-time-between-records-in-a-logging-table-with-db2/><div class=article-details><h2 class=article-title>Find time between records in a logging table with DB2</h2></div></a></article><article><a href=/2014/03/find-nullable-columns-in-db2-with-no-null-values/><div class=article-details><h2 class=article-title>Find Nullable Columns in DB2 with no Null Values</h2></div></a></article><article><a href=/2014/03/how-to-truncate-a-db2-table/><div class=article-details><h2 class=article-title>How to Truncate a DB2 Table</h2></div></a></article><article><a href=/2014/03/db2-when-were-index-stats-last-updated-on-a-table/><div class=article-details><h2 class=article-title>DB2: When were index stats last updated on a table?</h2></div></a></article></div></div></aside><div class=disqus-container></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><script type=module>
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script></main></div><script type=text/javascript src=/ts/main.1ff1e5fdc4e178ed422e50aa407526dc552f26342d729343fded19416194382c.js defer></script></body></html>
