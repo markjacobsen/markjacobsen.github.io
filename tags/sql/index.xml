@@ -539,14 +539,14 @@ SELECT STOREDPROC,TEXTX,OBJECTNAME,CARD,BIND_STATS_CREATE_TIME,FLAG
 ------------------------------------------------------------------------
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And a few things &lt;a href="https://markjacobsen.net/people/fred-johnson/" target="_blank"&gt;Fred&lt;/a&gt; suggested to be mindful of&amp;hellip; &amp;ldquo;It should work with DB2luw and has been tested in AIX v9.5-10.2. There is one major caveat. The query assumes one proc has only one specific name i.e., it only works for non-overloaded procs. It also uses at least one deprecated column, ROUTINENAME in ROUTINEDEP. Changing the proc to use specific names wouldn’t be a big deal.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;Have fun, and if you use this or have any suggested enhancements, please leave a comment below.&lt;/p&gt;</description></item><item><title>DB2 Get Current MAX value for all IDENTITY Columns</title><link>https://markjacobsen.net/2014/01/db2-get-current-max-value-for-all-identity-columns/</link><pubDate>Fri, 17 Jan 2014 15:05:58 +0000</pubDate><guid>https://markjacobsen.net/2014/01/db2-get-current-max-value-for-all-identity-columns/</guid><description>&lt;p&gt;If you’ve ever dealt with DB2 IDENTITY columns chances are you may have wanted to know what the currently assigned max value is for all of the IDENTITY columns in the DB. If so, you can use the following SQL to generate the SQL that will give you your answer. Hope it helps!&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;select 'select '''||trim(t.tabname)||''', '''||trim(c.colname)||''', max('||trim(c.colname)||') from '||trim(t.tabschema)||'.'||trim(t.tabname)||' for read only with ur;'
-from syscat.sequences s join syscat.tables t on
-(s.seqschema=t.tabschema and s.create_time=t.create_time)
-join syscat.columns c on
-(t.tabschema=c.tabschema and t.tabname=c.tabname)
-where s.seqname like 'SQL%'
-and c.identity='Y'
+&lt;p&gt;Have fun, and if you use this or have any suggested enhancements, please leave a comment below.&lt;/p&gt;</description></item><item><title>DB2 Get Current MAX value for all IDENTITY Columns</title><link>https://markjacobsen.net/dev/db2-get-current-max-value-for-all-identity-columns/</link><pubDate>Fri, 17 Jan 2014 15:05:58 +0000</pubDate><guid>https://markjacobsen.net/dev/db2-get-current-max-value-for-all-identity-columns/</guid><description>&lt;p&gt;If you&amp;rsquo;ve ever dealt with DB2 IDENTITY columns chances are you may have wanted to know what the currently assigned max value is for all of the IDENTITY columns in the DB. If so, you can use the following SQL to generate the SQL that will give you your answer. Hope it helps!&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;select &amp;#39;select &amp;#39;&amp;#39;&amp;#39;||trim(t.tabname)||&amp;#39;&amp;#39;&amp;#39;, &amp;#39;&amp;#39;&amp;#39;||trim(c.colname)||&amp;#39;&amp;#39;&amp;#39;, max(&amp;#39;||trim(c.colname)||&amp;#39;) from &amp;#39;||trim(t.tabschema)||&amp;#39;.&amp;#39;||trim(t.tabname)||&amp;#39; for read only with ur;&amp;#39;
+ from syscat.sequences s join syscat.tables t on
+ (s.seqschema=t.tabschema and s.create_time=t.create_time)
+ join syscat.columns c on
+ (t.tabschema=c.tabschema and t.tabname=c.tabname)
+ where s.seqname like &amp;#39;SQL%&amp;#39;
+ and c.identity=&amp;#39;Y&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;</description></item><item><title>DB2: How to find records with non-printable characters (SQLSTATE 01517)</title><link>https://markjacobsen.net/2013/12/db2-how-to-find-records-with-non-printable-characters-sqlstate-01517/</link><pubDate>Wed, 11 Dec 2013 14:17:09 +0000</pubDate><guid>https://markjacobsen.net/2013/12/db2-how-to-find-records-with-non-printable-characters-sqlstate-01517/</guid><description>&lt;p&gt;If you run a select statement and get the following error…&lt;/p&gt;
 &lt;pre&gt;"SQLSTATE 01517: A character that could not be converted was 
 replaced with a substitute character."&lt;/pre&gt;

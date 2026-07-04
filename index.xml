@@ -4126,14 +4126,14 @@ Krissy Brady @writtenbykrissy on 20 Unproductive Habits You Should Let Go of –
  &gt;http://bit.ly/1dyfsfy&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Fri 1/17&lt;/strong&gt;&lt;br&gt;
 Rachel Macy Stafford @handsfreemama on: The Important Thing About Yelling – &lt;a class="link" href="http://bit.ly/1czDEIp" target="_blank" rel="noopener"
- &gt;http://bit.ly/1czDEIp&lt;/a&gt;&lt;/p&gt;</description></item><item><title>DB2 Get Current MAX value for all IDENTITY Columns</title><link>https://markjacobsen.net/2014/01/db2-get-current-max-value-for-all-identity-columns/</link><pubDate>Fri, 17 Jan 2014 15:05:58 +0000</pubDate><guid>https://markjacobsen.net/2014/01/db2-get-current-max-value-for-all-identity-columns/</guid><description>&lt;p&gt;If you’ve ever dealt with DB2 IDENTITY columns chances are you may have wanted to know what the currently assigned max value is for all of the IDENTITY columns in the DB. If so, you can use the following SQL to generate the SQL that will give you your answer. Hope it helps!&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;select 'select '''||trim(t.tabname)||''', '''||trim(c.colname)||''', max('||trim(c.colname)||') from '||trim(t.tabschema)||'.'||trim(t.tabname)||' for read only with ur;'
-from syscat.sequences s join syscat.tables t on
-(s.seqschema=t.tabschema and s.create_time=t.create_time)
-join syscat.columns c on
-(t.tabschema=c.tabschema and t.tabname=c.tabname)
-where s.seqname like 'SQL%'
-and c.identity='Y'
+ &gt;http://bit.ly/1czDEIp&lt;/a&gt;&lt;/p&gt;</description></item><item><title>DB2 Get Current MAX value for all IDENTITY Columns</title><link>https://markjacobsen.net/dev/db2-get-current-max-value-for-all-identity-columns/</link><pubDate>Fri, 17 Jan 2014 15:05:58 +0000</pubDate><guid>https://markjacobsen.net/dev/db2-get-current-max-value-for-all-identity-columns/</guid><description>&lt;p&gt;If you&amp;rsquo;ve ever dealt with DB2 IDENTITY columns chances are you may have wanted to know what the currently assigned max value is for all of the IDENTITY columns in the DB. If so, you can use the following SQL to generate the SQL that will give you your answer. Hope it helps!&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;select &amp;#39;select &amp;#39;&amp;#39;&amp;#39;||trim(t.tabname)||&amp;#39;&amp;#39;&amp;#39;, &amp;#39;&amp;#39;&amp;#39;||trim(c.colname)||&amp;#39;&amp;#39;&amp;#39;, max(&amp;#39;||trim(c.colname)||&amp;#39;) from &amp;#39;||trim(t.tabschema)||&amp;#39;.&amp;#39;||trim(t.tabname)||&amp;#39; for read only with ur;&amp;#39;
+ from syscat.sequences s join syscat.tables t on
+ (s.seqschema=t.tabschema and s.create_time=t.create_time)
+ join syscat.columns c on
+ (t.tabschema=c.tabschema and t.tabname=c.tabname)
+ where s.seqname like &amp;#39;SQL%&amp;#39;
+ and c.identity=&amp;#39;Y&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Weekly Round-Up: 1/5/14 to 1/11/14</title><link>https://markjacobsen.net/2014/01/weekly-round-up-1514-to-11114/</link><pubDate>Sun, 12 Jan 2014 12:43:39 +0000</pubDate><guid>https://markjacobsen.net/2014/01/weekly-round-up-1514-to-11114/</guid><description>&lt;p&gt;The Weekly Round-Up is a once weekly collection of my #1Aday daily shares. Hope you find something of interest!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Mon 1/6&lt;/strong&gt;&lt;br&gt;
 Daniel Wallen @TheWallenWay on 20 Simple But Powerful Changes You Can Make To Simplify Your Life – [http://mjg2.net/l/1905][1]&lt;/p&gt;

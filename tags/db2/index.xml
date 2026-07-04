@@ -174,4 +174,12 @@ Type_X
  
  
  Ref: http://publib.boulder.ibm.com/infocenter/db2luw/v9/index.jsp?topic=/com.ibm.db2.udb.admin.doc/doc/c0004592.htm
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>DB2 Get Current MAX value for all IDENTITY Columns</title><link>https://markjacobsen.net/dev/db2-get-current-max-value-for-all-identity-columns/</link><pubDate>Fri, 17 Jan 2014 15:05:58 +0000</pubDate><guid>https://markjacobsen.net/dev/db2-get-current-max-value-for-all-identity-columns/</guid><description>&lt;p&gt;If you&amp;rsquo;ve ever dealt with DB2 IDENTITY columns chances are you may have wanted to know what the currently assigned max value is for all of the IDENTITY columns in the DB. If so, you can use the following SQL to generate the SQL that will give you your answer. Hope it helps!&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;select &amp;#39;select &amp;#39;&amp;#39;&amp;#39;||trim(t.tabname)||&amp;#39;&amp;#39;&amp;#39;, &amp;#39;&amp;#39;&amp;#39;||trim(c.colname)||&amp;#39;&amp;#39;&amp;#39;, max(&amp;#39;||trim(c.colname)||&amp;#39;) from &amp;#39;||trim(t.tabschema)||&amp;#39;.&amp;#39;||trim(t.tabname)||&amp;#39; for read only with ur;&amp;#39;
+ from syscat.sequences s join syscat.tables t on
+ (s.seqschema=t.tabschema and s.create_time=t.create_time)
+ join syscat.columns c on
+ (t.tabschema=c.tabschema and t.tabname=c.tabname)
+ where s.seqname like &amp;#39;SQL%&amp;#39;
+ and c.identity=&amp;#39;Y&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>
