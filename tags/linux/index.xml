@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on MarkJacobsen.net</title><link>https://markjacobsen.net/tags/linux/</link><description>Recent content in Linux on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 09 Jul 2026 12:18:44 +0000</lastBuildDate><atom:link href="https://markjacobsen.net/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>systemd and systemctl</title><link>https://markjacobsen.net/2026/07/systemd-and-systemctl/</link><pubDate>Thu, 09 Jul 2026 12:18:44 +0000</pubDate><guid>https://markjacobsen.net/2026/07/systemd-and-systemctl/</guid><description>&lt;p&gt;If you use Linux for any period of time, chances are you will come across &lt;code&gt;systemd&lt;/code&gt; and &lt;code&gt;systemctl&lt;/code&gt;, but just what are they?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;systemd&lt;/strong&gt; is a system and service manager for Linux operating systems. It serves as the primary initialization (&lt;strong&gt;init&lt;/strong&gt;) system, meaning it is the very first process that starts when the computer boots up (holding &lt;strong&gt;PID 1&lt;/strong&gt;). Its job is to bring up the rest of the system, manage background services (daemons), handle system states, and mount filesystems.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;systemctl&lt;/strong&gt; is the dedicated command-line utility used to interact with and control &lt;strong&gt;systemd&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Think of &lt;strong&gt;systemd&lt;/strong&gt; as the engine and manager running behind the scenes, and &lt;strong&gt;systemctl&lt;/strong&gt; as the steering wheel and dashboard you use to command it.&lt;/p&gt;
+&lt;p&gt;But just how do you use them?&lt;/p&gt;
+&lt;h3 id="managing-services"&gt;Managing Services
+&lt;/h3&gt;&lt;p&gt;Well, to start with you can list out all the active system services:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;systemctl list-units --type&lt;span style="color:#f92672"&gt;=&lt;/span&gt;service --state&lt;span style="color:#f92672"&gt;=&lt;/span&gt;active
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To check if a service is running and see its PID and recent log output:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;systemctl status service-name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="starting-vs-enabling"&gt;Starting vs. Enabling
+&lt;/h4&gt;&lt;p&gt;A common point of confusion is the difference between starting/stopping and enabling/disabling:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Start / Stop&lt;/strong&gt;: Changes the service&amp;rsquo;s current state immediately (but won&amp;rsquo;t persist after a reboot).
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl start service-name
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl stop service-name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enable / Disable&lt;/strong&gt;: Tells the system whether to launch the service automatically during boot.
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl enable service-name
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl disable service-name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="restarting-and-reloading"&gt;Restarting and Reloading
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Restart&lt;/strong&gt;: Shuts down the service and starts it back up.
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl restart service-name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reload&lt;/strong&gt;: Instructs the service to apply new configuration files &lt;em&gt;without&lt;/em&gt; shutting down or causing downtime.
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl reload service-name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="inspecting-configuration--logs"&gt;Inspecting Configuration &amp;amp; Logs
+&lt;/h3&gt;&lt;p&gt;Want to view the configuration files for a service?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;systemctl cat service-name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And if you need to read the full log history for that service, you can query systemd&amp;rsquo;s companion logging tool, &lt;code&gt;journalctl&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;journalctl -u service-name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="wrapping-up"&gt;Wrapping Up
+&lt;/h3&gt;&lt;p&gt;Hopefully that&amp;rsquo;s a good quick spin through the basics of systemd services, and something worth referring back to later.&lt;/p&gt;</description></item></channel></rss>
