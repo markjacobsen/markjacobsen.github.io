@@ -12,7 +12,78 @@
 &lt;p&gt;This is the pattern I keep coming back to. &lt;strong&gt;Engineers with taste use AI to iterate toward a thing they already know is right. Engineers without taste use AI to guess at what right might look like, and then ship whichever guess compiled.&lt;/strong&gt; These are not the same activity. They look the same from the outside. They produce completely different codebases over the course of a year.&lt;/p&gt;
 &lt;p&gt;The market rate for typing is dropping fast. The market rate for knowing what to type is not.&lt;/p&gt;
 
- &lt;/blockquote&gt;</description></item><item><title>DB2 Get Current MAX value for all IDENTITY Columns</title><link>https://markjacobsen.net/2014/01/db2-get-current-max-value-for-all-identity-columns/</link><pubDate>Fri, 17 Jan 2014 15:05:58 +0000</pubDate><guid>https://markjacobsen.net/2014/01/db2-get-current-max-value-for-all-identity-columns/</guid><description>&lt;p&gt;If you&amp;rsquo;ve ever dealt with DB2 IDENTITY columns chances are you may have wanted to know what the currently assigned max value is for all of the IDENTITY columns in the DB. If so, you can use the following SQL to generate the SQL that will give you your answer. Hope it helps!&lt;/p&gt;
+ &lt;/blockquote&gt;</description></item><item><title>Visualize data with the new hierarchy control in D365</title><link>https://markjacobsen.net/2025/09/visualize-data-with-the-new-hierarchy-control-in-d365/</link><pubDate>Wed, 24 Sep 2025 11:51:00 +0000</pubDate><guid>https://markjacobsen.net/2025/09/visualize-data-with-the-new-hierarchy-control-in-d365/</guid><description>&lt;p&gt;Check out this article: &lt;a class="link" href="https://d365goddess.com/visualize-data-with-the-new-hierarchy-control/?utm_source=rss" target="_blank" rel="noopener"
+ &gt;Visualize data with the new hierarchy control in D365&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This looks super cool and nice to see it being added (back) in as native functionality.&lt;/p&gt;
+&lt;div class="video-wrapper"&gt;
+ &lt;iframe loading="lazy" 
+ src="https://www.youtube.com/embed/NViDv7XNJAA" 
+ allowfullscreen 
+ title="YouTube Video"
+ &gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+</description></item><item><title>Measuring the impact of AI on software engineering – with Laura Tacho</title><link>https://markjacobsen.net/2025/07/measuring-the-impact-of-ai-on-software-engineering-with-laura-tacho/</link><pubDate>Tue, 29 Jul 2025 11:31:00 +0000</pubDate><guid>https://markjacobsen.net/2025/07/measuring-the-impact-of-ai-on-software-engineering-with-laura-tacho/</guid><description>&lt;p&gt;Check out this article: &lt;a class="link" href="https://pca.st/episode/a0927348-175d-4ab9-b5c1-683315149b97" target="_blank" rel="noopener"
+ &gt;Measuring the impact of AI on software engineering – with Laura Tacho&lt;/a&gt;&lt;/p&gt;
+&lt;iframe src="https://pca.st/embed/xtlj21if" 
+ style="width: 100%; height: 160px; border: none; overflow: hidden;" 
+ frameborder="0" 
+ scrolling="no"&gt;
+&lt;/iframe&gt;</description></item><item><title>Drip files one at a time for processing with a Windows batch script</title><link>https://markjacobsen.net/2025/07/drip-files-one-at-a-time-for-processing-with-a-windows-batch-script/</link><pubDate>Fri, 04 Jul 2025 12:14:00 +0000</pubDate><guid>https://markjacobsen.net/2025/07/drip-files-one-at-a-time-for-processing-with-a-windows-batch-script/</guid><description>&lt;p&gt;Ever have a collection of files that you need to send off to something else for processing, but need to process the files one at a time waiting for the completion of each (signaled by a file&amp;rsquo;s existence because you have no hook to the return code of the originating process) before continuing with the next?&lt;/p&gt;
+&lt;p&gt;No? Just me? 🤣 Anyway, here&amp;rsquo;s a script that takes an array of files, copies them to a directory for a different app to process, waits for that process to end (by looking for the file with a done extension added) before continuing on with the next.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;@echo off
+setlocal enabledelayedexpansion
+
+set IMPORTDIR=X:\App\Process\
+
+rem List your files here (one per line)
+set FILES[0]=X:\Data\File1.csv
+set FILES[1]=X:\Data\File2.csv
+set FILES[2]=X:\Data\File3.csv
+
+rem Set the number of files
+set NUMFILES=3
+
+set SLEEP_SECONDS=5
+
+for /L %%I in (0,1,%NUMFILES%-1) do (
+    call :WAITLOOP &amp;#34;!FILES[%%I]!&amp;#34;
+)
+
+echo All files processed.
+exit /b
+
+:WAITLOOP
+rem Get the base name (without extension) and directory
+set &amp;#34;FULLFILE=%~1&amp;#34;
+set &amp;#34;BASEDIR=%~dp1&amp;#34;
+set &amp;#34;BASENAME=%~n1&amp;#34;
+
+if &amp;#34;%BASENAME%&amp;#34;==&amp;#34;&amp;#34; (
+    rem This is important so we actually terminate
+    goto :EOF
+)
+
+rem Compose the .done filename
+set &amp;#34;DONEFILE=%IMPORTDIR%%BASENAME%.csv.done&amp;#34;
+
+if exist &amp;#34;%DONEFILE%&amp;#34; (
+    echo Removing previous done file.
+    del &amp;#34;%DONEFILE%&amp;#34;
+)
+
+copy &amp;#34;%FULLFILE%&amp;#34; &amp;#34;%IMPORTDIR%%BASENAME%.csv&amp;#34;
+
+:LOOP
+if exist &amp;#34;%DONEFILE%&amp;#34; (
+    echo File found: %DONEFILE%
+    goto :EOF
+) else (
+    echo Waiting for file: %DONEFILE%
+    timeout /t %SLEEP_SECONDS% /nobreak &amp;gt;nul
+    goto LOOP
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Just update the details as needed, but the above is tested and works!&lt;/p&gt;</description></item><item><title>DB2 Get Current MAX value for all IDENTITY Columns</title><link>https://markjacobsen.net/2014/01/db2-get-current-max-value-for-all-identity-columns/</link><pubDate>Fri, 17 Jan 2014 15:05:58 +0000</pubDate><guid>https://markjacobsen.net/2014/01/db2-get-current-max-value-for-all-identity-columns/</guid><description>&lt;p&gt;If you&amp;rsquo;ve ever dealt with DB2 IDENTITY columns chances are you may have wanted to know what the currently assigned max value is for all of the IDENTITY columns in the DB. If so, you can use the following SQL to generate the SQL that will give you your answer. Hope it helps!&lt;/p&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;select &amp;#39;select &amp;#39;&amp;#39;&amp;#39;||trim(t.tabname)||&amp;#39;&amp;#39;&amp;#39;, &amp;#39;&amp;#39;&amp;#39;||trim(c.colname)||&amp;#39;&amp;#39;&amp;#39;, max(&amp;#39;||trim(c.colname)||&amp;#39;) from &amp;#39;||trim(t.tabschema)||&amp;#39;.&amp;#39;||trim(t.tabname)||&amp;#39; for read only with ur;&amp;#39;
  from syscat.sequences s join syscat.tables t on
  (s.seqschema=t.tabschema and s.create_time=t.create_time)
