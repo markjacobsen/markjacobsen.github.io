@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MarkJacobsen.net</title><link>https://markjacobsen.net/</link><description>Recent content on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Jul 2026 17:21:26 +0000</lastBuildDate><atom:link href="https://markjacobsen.net/index.xml" rel="self" type="application/rss+xml"/><item><title>Why can't I bulk close the incomplete activities on a Dynamics 365 Campaign Activity?</title><link>https://markjacobsen.net/2026/07/why-cant-i-bulk-close-the-incomplete-activities-on-a-dynamics-365-campaign-activity/</link><pubDate>Tue, 21 Jul 2026 17:21:26 +0000</pubDate><guid>https://markjacobsen.net/2026/07/why-cant-i-bulk-close-the-incomplete-activities-on-a-dynamics-365-campaign-activity/</guid><description>&lt;p&gt;Personally, I find it rather frustrating that you can&amp;rsquo;t bulk close open activities when viewing in a sub-grid under Campaign Activity. Ultimately it comes down to how things work behind the scenes since Campaign Activities can distribute multiple types of activities (phone calls, emails, etc). Additionally, the out-of-the-box command bar logic for activity status changes (like &amp;ldquo;Mark Complete&amp;rdquo; or &amp;ldquo;Close&amp;rdquo;) relies on record-type-specific logic which can often also prompt for record-type-specific data.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MarkJacobsen.net</title><link>https://markjacobsen.net/</link><description>Recent content on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Jul 2026 19:48:46 +0000</lastBuildDate><atom:link href="https://markjacobsen.net/index.xml" rel="self" type="application/rss+xml"/><item><title>Curl</title><link>https://markjacobsen.net/2026/07/curl/</link><pubDate>Tue, 21 Jul 2026 19:48:46 +0000</pubDate><guid>https://markjacobsen.net/2026/07/curl/</guid><description>&lt;p&gt;&lt;code&gt;curl&lt;/code&gt; (Client URL) is a command-line tool used to transfer data to or from a server using various protocols (HTTP, HTTPS, FTP, etc.). For example, just some uses include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;GET&amp;rdquo; a URL (the rought equivalent of just pasting the URL into your browser address bar)&lt;/li&gt;
+&lt;li&gt;Interact with an API (Usually REST, but it doesn&amp;rsquo;t have to be)&lt;/li&gt;
+&lt;li&gt;Download a file in a scripted/automated fashion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yes, you can find a curl tutorial just about anywhere. These are just a few of my notes for later reference, and maybe something you (dear reader) can learn from as well.&lt;/p&gt;
+&lt;p&gt;Note: while these notes are Linux specific you can also use curl via PowerShell or the Windows command line.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-basic-usage--syntax"&gt;1. Basic Usage &amp;amp; Syntax
+&lt;/h2&gt;&lt;h3 id="basic-get-request"&gt;Basic GET Request
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl https://api.example.com/data
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="key-concepts"&gt;Key Concepts
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Default method: &lt;code&gt;GET&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Outputs response directly to &lt;code&gt;stdout&lt;/code&gt; (terminal)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="2-passing-a-bearer-token"&gt;2. Passing a Bearer Token
+&lt;/h2&gt;&lt;p&gt;This is especially useful when interacting with an API that requires this level of authentication. Simply use the &lt;code&gt;-H&lt;/code&gt; (or &lt;code&gt;--header&lt;/code&gt;) flag to send an &lt;code&gt;Authorization&lt;/code&gt; header containing a Bearer token.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -H &lt;span style="color:#e6db74"&gt;&amp;#34;Authorization: Bearer YOUR_ACCESS_TOKEN&amp;#34;&lt;/span&gt; https://api.example.com/protected
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="passing-multiple-headers"&gt;Passing Multiple Headers
+&lt;/h3&gt;&lt;p&gt;Of course there are other times when you need to pass more than 1 header&amp;hellip;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -H &lt;span style="color:#e6db74"&gt;&amp;#34;Authorization: Bearer YOUR_ACCESS_TOKEN&amp;#34;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -H &lt;span style="color:#e6db74"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; https://api.example.com/protected
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="3-saving-output--downloading-files"&gt;3. Saving Output / Downloading Files
+&lt;/h2&gt;&lt;h3 id="option-a-save-with-remote-filename--o----remote-name"&gt;Option A: Save with Remote Filename (&lt;code&gt;-O&lt;/code&gt; / &lt;code&gt;--remote-name&lt;/code&gt;)
+&lt;/h3&gt;&lt;p&gt;Saves the file using the original filename from the URL.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -O https://example.com/files/document.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="option-b-save-with-custom-output-path--o----output"&gt;Option B: Save with Custom Output Path (&lt;code&gt;-o&lt;/code&gt; / &lt;code&gt;--output&lt;/code&gt;)
+&lt;/h3&gt;&lt;p&gt;Saves the output to a specific path or filename.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -o /path/to/local_file.pdf https://example.com/files/document.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="option-c-follow-redirects--l----location"&gt;Option C: Follow Redirects (&lt;code&gt;-L&lt;/code&gt; / &lt;code&gt;--location&lt;/code&gt;)
+&lt;/h3&gt;&lt;p&gt;Combine &lt;code&gt;-L&lt;/code&gt; with &lt;code&gt;-o&lt;/code&gt; or &lt;code&gt;-O&lt;/code&gt; if the URL redirects (HTTP 301/302).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -L -o download.tar.gz https://example.com/download/latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="4-capturing-output"&gt;4. Capturing Output
+&lt;/h2&gt;&lt;h3 id="capture-response-in-a-shell-variable"&gt;Capture Response in a Shell Variable
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;curl -s https://api.example.com/data&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$response&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="capture-response-body-and-http-status-code"&gt;Capture Response Body and HTTP Status Code
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Save status code to variable and body to file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;http_code&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;curl -s -o response.json -w &lt;span style="color:#e6db74"&gt;&amp;#34;%{http_code}&amp;#34;&lt;/span&gt; https://api.example.com/data&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;HTTP Status Code: &lt;/span&gt;$http_code&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="capture-response-headers--i-or--i"&gt;Capture Response Headers (&lt;code&gt;-i&lt;/code&gt; or &lt;code&gt;-I&lt;/code&gt;)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Include headers with body (&lt;code&gt;-i&lt;/code&gt;):&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -i https://api.example.com/data
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fetch headers only (&lt;code&gt;-I&lt;/code&gt; or &lt;code&gt;--head&lt;/code&gt;):&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -I https://api.example.com/data
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="5-quick-reference-flags"&gt;5. Quick Reference Flags
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Flag&lt;/th&gt;
+					&lt;th&gt;Long Name&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-X&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--request&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Specifies HTTP method (&lt;code&gt;GET&lt;/code&gt;, &lt;code&gt;POST&lt;/code&gt;, &lt;code&gt;PUT&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-H&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--header&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Adds custom HTTP headers&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-d&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--data&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Sends POST data (JSON, form fields)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-o&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--output&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Writes output to specified file path&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-O&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--remote-name&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Writes output to file named as in remote URL&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-s&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--silent&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Mutes progress meter and error messages&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-v&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--verbose&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Detailed log of request and response details&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-L&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--location&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Follows HTTP redirects&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;​&lt;/p&gt;</description></item><item><title>Why can't I bulk close the incomplete activities on a Dynamics 365 Campaign Activity?</title><link>https://markjacobsen.net/2026/07/why-cant-i-bulk-close-the-incomplete-activities-on-a-dynamics-365-campaign-activity/</link><pubDate>Tue, 21 Jul 2026 17:21:26 +0000</pubDate><guid>https://markjacobsen.net/2026/07/why-cant-i-bulk-close-the-incomplete-activities-on-a-dynamics-365-campaign-activity/</guid><description>&lt;p&gt;Personally, I find it rather frustrating that you can&amp;rsquo;t bulk close open activities when viewing in a sub-grid under Campaign Activity. Ultimately it comes down to how things work behind the scenes since Campaign Activities can distribute multiple types of activities (phone calls, emails, etc). Additionally, the out-of-the-box command bar logic for activity status changes (like &amp;ldquo;Mark Complete&amp;rdquo; or &amp;ldquo;Close&amp;rdquo;) relies on record-type-specific logic which can often also prompt for record-type-specific data.&lt;/p&gt;
 &lt;p&gt;See also &lt;a class="link" href="https://share.gemini.google/PSJxwYoX8Y06" target="_blank" rel="noopener"
  &gt;https://share.gemini.google/PSJxwYoX8Y06&lt;/a&gt;​​​&lt;/p&gt;</description></item><item><title>Reverse Engineer a Browser Extension</title><link>https://markjacobsen.net/2026/07/reverse-engineer-a-browser-extension/</link><pubDate>Fri, 10 Jul 2026 20:51:04 +0000</pubDate><guid>https://markjacobsen.net/2026/07/reverse-engineer-a-browser-extension/</guid><description>&lt;p&gt;Ever need to reverse engineer how a browser extension is doing what it&amp;rsquo;s doing? Well, with a little help from Cursor I was able to do just that. The use case here was determining how the extension was parsing pages (i.e. what it was looking for and how it got what to look for), and then how it was invoking the thing it does (in this case making a HTTP call with info it found on a page).&lt;/p&gt;
 &lt;p&gt;Fortunately the prompt was stupid simple:&lt;/p&gt;

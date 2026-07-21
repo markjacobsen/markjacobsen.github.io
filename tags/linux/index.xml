@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on MarkJacobsen.net</title><link>https://markjacobsen.net/tags/linux/</link><description>Recent content in Linux on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 09 Jul 2026 12:18:44 +0000</lastBuildDate><atom:link href="https://markjacobsen.net/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>systemd and systemctl</title><link>https://markjacobsen.net/2026/07/systemd-and-systemctl/</link><pubDate>Thu, 09 Jul 2026 12:18:44 +0000</pubDate><guid>https://markjacobsen.net/2026/07/systemd-and-systemctl/</guid><description>&lt;p&gt;If you use Linux for any period of time, chances are you will come across &lt;code&gt;systemd&lt;/code&gt; and &lt;code&gt;systemctl&lt;/code&gt;, but just what are they?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on MarkJacobsen.net</title><link>https://markjacobsen.net/tags/linux/</link><description>Recent content in Linux on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Jul 2026 19:48:46 +0000</lastBuildDate><atom:link href="https://markjacobsen.net/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Curl</title><link>https://markjacobsen.net/2026/07/curl/</link><pubDate>Tue, 21 Jul 2026 19:48:46 +0000</pubDate><guid>https://markjacobsen.net/2026/07/curl/</guid><description>&lt;p&gt;&lt;code&gt;curl&lt;/code&gt; (Client URL) is a command-line tool used to transfer data to or from a server using various protocols (HTTP, HTTPS, FTP, etc.). For example, just some uses include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;GET&amp;rdquo; a URL (the rought equivalent of just pasting the URL into your browser address bar)&lt;/li&gt;
+&lt;li&gt;Interact with an API (Usually REST, but it doesn&amp;rsquo;t have to be)&lt;/li&gt;
+&lt;li&gt;Download a file in a scripted/automated fashion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yes, you can find a curl tutorial just about anywhere. These are just a few of my notes for later reference, and maybe something you (dear reader) can learn from as well.&lt;/p&gt;
+&lt;p&gt;Note: while these notes are Linux specific you can also use curl via PowerShell or the Windows command line.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-basic-usage--syntax"&gt;1. Basic Usage &amp;amp; Syntax
+&lt;/h2&gt;&lt;h3 id="basic-get-request"&gt;Basic GET Request
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl https://api.example.com/data
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="key-concepts"&gt;Key Concepts
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Default method: &lt;code&gt;GET&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Outputs response directly to &lt;code&gt;stdout&lt;/code&gt; (terminal)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="2-passing-a-bearer-token"&gt;2. Passing a Bearer Token
+&lt;/h2&gt;&lt;p&gt;This is especially useful when interacting with an API that requires this level of authentication. Simply use the &lt;code&gt;-H&lt;/code&gt; (or &lt;code&gt;--header&lt;/code&gt;) flag to send an &lt;code&gt;Authorization&lt;/code&gt; header containing a Bearer token.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -H &lt;span style="color:#e6db74"&gt;&amp;#34;Authorization: Bearer YOUR_ACCESS_TOKEN&amp;#34;&lt;/span&gt; https://api.example.com/protected
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="passing-multiple-headers"&gt;Passing Multiple Headers
+&lt;/h3&gt;&lt;p&gt;Of course there are other times when you need to pass more than 1 header&amp;hellip;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -H &lt;span style="color:#e6db74"&gt;&amp;#34;Authorization: Bearer YOUR_ACCESS_TOKEN&amp;#34;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -H &lt;span style="color:#e6db74"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; https://api.example.com/protected
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="3-saving-output--downloading-files"&gt;3. Saving Output / Downloading Files
+&lt;/h2&gt;&lt;h3 id="option-a-save-with-remote-filename--o----remote-name"&gt;Option A: Save with Remote Filename (&lt;code&gt;-O&lt;/code&gt; / &lt;code&gt;--remote-name&lt;/code&gt;)
+&lt;/h3&gt;&lt;p&gt;Saves the file using the original filename from the URL.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -O https://example.com/files/document.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="option-b-save-with-custom-output-path--o----output"&gt;Option B: Save with Custom Output Path (&lt;code&gt;-o&lt;/code&gt; / &lt;code&gt;--output&lt;/code&gt;)
+&lt;/h3&gt;&lt;p&gt;Saves the output to a specific path or filename.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -o /path/to/local_file.pdf https://example.com/files/document.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="option-c-follow-redirects--l----location"&gt;Option C: Follow Redirects (&lt;code&gt;-L&lt;/code&gt; / &lt;code&gt;--location&lt;/code&gt;)
+&lt;/h3&gt;&lt;p&gt;Combine &lt;code&gt;-L&lt;/code&gt; with &lt;code&gt;-o&lt;/code&gt; or &lt;code&gt;-O&lt;/code&gt; if the URL redirects (HTTP 301/302).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -L -o download.tar.gz https://example.com/download/latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="4-capturing-output"&gt;4. Capturing Output
+&lt;/h2&gt;&lt;h3 id="capture-response-in-a-shell-variable"&gt;Capture Response in a Shell Variable
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;curl -s https://api.example.com/data&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$response&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="capture-response-body-and-http-status-code"&gt;Capture Response Body and HTTP Status Code
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Save status code to variable and body to file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;http_code&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;curl -s -o response.json -w &lt;span style="color:#e6db74"&gt;&amp;#34;%{http_code}&amp;#34;&lt;/span&gt; https://api.example.com/data&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;HTTP Status Code: &lt;/span&gt;$http_code&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="capture-response-headers--i-or--i"&gt;Capture Response Headers (&lt;code&gt;-i&lt;/code&gt; or &lt;code&gt;-I&lt;/code&gt;)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Include headers with body (&lt;code&gt;-i&lt;/code&gt;):&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -i https://api.example.com/data
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fetch headers only (&lt;code&gt;-I&lt;/code&gt; or &lt;code&gt;--head&lt;/code&gt;):&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -I https://api.example.com/data
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="5-quick-reference-flags"&gt;5. Quick Reference Flags
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Flag&lt;/th&gt;
+					&lt;th&gt;Long Name&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-X&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--request&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Specifies HTTP method (&lt;code&gt;GET&lt;/code&gt;, &lt;code&gt;POST&lt;/code&gt;, &lt;code&gt;PUT&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-H&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--header&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Adds custom HTTP headers&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-d&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--data&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Sends POST data (JSON, form fields)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-o&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--output&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Writes output to specified file path&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-O&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--remote-name&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Writes output to file named as in remote URL&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-s&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--silent&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Mutes progress meter and error messages&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-v&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--verbose&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Detailed log of request and response details&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-L&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--location&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Follows HTTP redirects&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;​&lt;/p&gt;</description></item><item><title>systemd and systemctl</title><link>https://markjacobsen.net/2026/07/systemd-and-systemctl/</link><pubDate>Thu, 09 Jul 2026 12:18:44 +0000</pubDate><guid>https://markjacobsen.net/2026/07/systemd-and-systemctl/</guid><description>&lt;p&gt;If you use Linux for any period of time, chances are you will come across &lt;code&gt;systemd&lt;/code&gt; and &lt;code&gt;systemctl&lt;/code&gt;, but just what are they?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;systemd&lt;/strong&gt; is a system and service manager for Linux operating systems. It serves as the primary initialization (&lt;strong&gt;init&lt;/strong&gt;) system, meaning it is the very first process that starts when the computer boots up (holding &lt;strong&gt;PID 1&lt;/strong&gt;). Its job is to bring up the rest of the system, manage background services (daemons), handle system states, and mount filesystems.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;systemctl&lt;/strong&gt; is the dedicated command-line utility used to interact with and control &lt;strong&gt;systemd&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Think of &lt;strong&gt;systemd&lt;/strong&gt; as the engine and manager running behind the scenes, and &lt;strong&gt;systemctl&lt;/strong&gt; as the steering wheel and dashboard you use to command it.&lt;/p&gt;
