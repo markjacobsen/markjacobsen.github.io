@@ -25,7 +25,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; -H &lt;span style="color:#e6db74"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; https://api.example.com/protected
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id="3-saving-output--downloading-files"&gt;3. Saving Output / Downloading Files
+&lt;h2 id="3-passing-a-json-body"&gt;3. Passing a JSON body
+&lt;/h2&gt;&lt;p&gt;For this you combine a header (&lt;code&gt;-H&lt;/code&gt; or &lt;code&gt;--header&lt;/code&gt;) along with some data (&lt;code&gt;-d&lt;/code&gt; or &lt;code&gt;--data&lt;/code&gt;). Here&amp;rsquo;s an example sending a Bearer token and a JSON body.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -X GET &lt;span style="color:#e6db74"&gt;&amp;#34;https://api.example.com/protected&amp;#34;&lt;/span&gt; -H &lt;span style="color:#e6db74"&gt;&amp;#34;Authorization: Bearer YOUR_ACCESS_TOKEN&amp;#34;&lt;/span&gt; -H &lt;span style="color:#e6db74"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; -d &lt;span style="color:#e6db74"&gt;&amp;#39;{&amp;#34;key1&amp;#34;: false, &amp;#34;key2&amp;#34;: &amp;#34;neat&amp;#34;}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="4-saving-output--downloading-files"&gt;4. Saving Output / Downloading Files
 &lt;/h2&gt;&lt;h3 id="option-a-save-with-remote-filename--o----remote-name"&gt;Option A: Save with Remote Filename (&lt;code&gt;-O&lt;/code&gt; / &lt;code&gt;--remote-name&lt;/code&gt;)
 &lt;/h3&gt;&lt;p&gt;Saves the file using the original filename from the URL.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -O https://example.com/files/document.pdf
@@ -36,7 +40,7 @@
 &lt;/h3&gt;&lt;p&gt;Combine &lt;code&gt;-L&lt;/code&gt; with &lt;code&gt;-o&lt;/code&gt; or &lt;code&gt;-O&lt;/code&gt; if the URL redirects (HTTP 301/302).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -L -o download.tar.gz https://example.com/download/latest
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id="4-capturing-output"&gt;4. Capturing Output
+&lt;h2 id="5-capturing-output"&gt;5. Capturing Output
 &lt;/h2&gt;&lt;h3 id="capture-response-in-a-shell-variable"&gt;Capture Response in a Shell Variable
 &lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;response&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;curl -s https://api.example.com/data&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$response&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
@@ -55,7 +59,7 @@
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -I https://api.example.com/data
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id="5-quick-reference-flags"&gt;5. Quick Reference Flags
+&lt;h2 id="6-quick-reference-flags"&gt;6. Quick Reference Flags
 &lt;/h2&gt;&lt;table&gt;
 	&lt;thead&gt;
 			&lt;tr&gt;
