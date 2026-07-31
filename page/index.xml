@@ -999,14 +999,36 @@ ctrl+R = redo
  &lt;/script&gt;&lt;/div&gt;
 </description></item><item><title>Thanks for your Call</title><link>https://markjacobsen.net/thanks-for-your-call/</link><pubDate>Fri, 07 Dec 2012 03:48:41 +0000</pubDate><guid>https://markjacobsen.net/thanks-for-your-call/</guid><description>&lt;p&gt;Thanks for your call.  Please take a few minutes to explore the site and some of the &lt;a title="My Projects" href="http://markjacobsen.net/my-projects/" target="_blank"&gt;projects I’m involved in&lt;/a&gt; or &lt;a title="Contact Me" href="http://markjacobsen.net/contact-me/" target="_blank"&gt;connect with me&lt;/a&gt; on the social media platform of your choice.&lt;/p&gt;</description></item><item><title>Thanks for your Text</title><link>https://markjacobsen.net/thanks-for-your-text/</link><pubDate>Fri, 07 Dec 2012 03:44:19 +0000</pubDate><guid>https://markjacobsen.net/thanks-for-your-text/</guid><description>&lt;p&gt;Thanks for your text message.  Please take a few minutes to explore the site and some of the &lt;a title="My Projects" href="http://markjacobsen.net/my-projects/" target="_blank"&gt;projects I’m involved in&lt;/a&gt; or &lt;a title="Contact Me" href="http://markjacobsen.net/contact-me/" target="_blank"&gt;connect with me&lt;/a&gt; on the social media platform of your choice.&lt;/p&gt;</description></item><item><title>JNL</title><link>https://markjacobsen.net/jnl/</link><pubDate>Mon, 03 Dec 2012 17:22:52 +0000</pubDate><guid>https://markjacobsen.net/jnl/</guid><description>&lt;p&gt;Welcome co-workers. I would like to invite you to subscribe to this site’s &lt;a class="link" href="https://markjacobsen.net/index.xml" &gt;RSS feed&lt;/a&gt; or &lt;a class="link" href="https://markjacobsen.net/newsletter/" &gt;email newsletter&lt;/a&gt; to get the most recent posts delivered to you in your preferred format. If you’re interested in doing a guest post or have an idea, please let me know.&lt;/p&gt;
 &lt;p&gt;In terms of contact information you obviously have my work contact information, but I’m also open to connecting on the social media platform of your choice (LinkedIn is mine). Check out the &lt;a class="link" href="https://markjacobsen.net/contact-me/" &gt;Contact Me&lt;/a&gt; page for details.&lt;/p&gt;</description></item><item><title>Contact Me</title><link>https://markjacobsen.net/contact-me/</link><pubDate>Mon, 26 Nov 2012 19:53:57 +0000</pubDate><guid>https://markjacobsen.net/contact-me/</guid><description>&lt;p&gt;You can easily connect/stay in touch with me via:&lt;/p&gt;
-&lt;ul class="wp-block-list"&gt;
- &lt;li&gt;
- &lt;a href="https://mamj.org/signal" target="_blank" rel="noreferrer noopener"&gt;Signal&lt;/a&gt; (messaging)
- &lt;/li&gt;
- &lt;li&gt;
- &lt;a rel="noreferrer noopener" href="https://mamj.org/linkedin" target="_blank"&gt;LinkedIn&lt;/a&gt; (professional)
- &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>My Projects</title><link>https://markjacobsen.net/my-projects/</link><pubDate>Wed, 21 Nov 2012 16:49:25 +0000</pubDate><guid>https://markjacobsen.net/my-projects/</guid><description>&lt;p&gt;&lt;em&gt;Latest Post: [latest_post]&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://mamj.org/signal" target="_blank" rel="noopener"
+ &gt;Signal&lt;/a&gt; (messaging)&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://mamj.org/linkedin" target="_blank" rel="noopener"
+ &gt;LinkedIn&lt;/a&gt; (professional)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mastodon-embed-timeline-widget@3.5.1/dist/magnific-popup.css" /&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mastodon-embed-timeline-widget@3.5.1/dist/mastodon-timeline.min.css" /&gt;
+
+
+&lt;div id="mt-timeline" class="mt-timeline"&gt;
+ &lt;div id="mt-body" class="mt-body"&gt;
+ &lt;div class="mt-loading"&gt;Loading timeline...&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;script src="https://cdn.jsdelivr.net/npm/mastodon-embed-timeline-widget@3.5.1/dist/mastodon-timeline.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+ document.addEventListener("DOMContentLoaded", function () {
+ let myTimeline = new MastodonTimeline({
+ instanceUrl: "https:\/\/techhub.social",
+ userId: "110113409170797514",
+ tootsLimit: 3 ,
+ btnSeeMore: "See more on Mastodon"
+ });
+ });
+&lt;/script&gt;</description></item><item><title>My Projects</title><link>https://markjacobsen.net/my-projects/</link><pubDate>Wed, 21 Nov 2012 16:49:25 +0000</pubDate><guid>https://markjacobsen.net/my-projects/</guid><description>&lt;p&gt;&lt;em&gt;Latest Post: [latest_post]&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I have a number of projects and services that I work on.  Please take a moment to view some of them…&lt;/p&gt;
 &lt;div&gt;
  &lt;strong&gt;Hosted and Virtual Business Phone Systems&lt;/strong&gt;
