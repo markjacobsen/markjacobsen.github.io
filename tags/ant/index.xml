@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ant on MarkJacobsen.net</title><link>https://markjacobsen.net/tags/ant/</link><description>Recent content in Ant on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 03 Jul 2013 15:10:11 +0000</lastBuildDate><atom:link href="https://markjacobsen.net/tags/ant/index.xml" rel="self" type="application/rss+xml"/><item><title>Resolving Ant javac “class file has wrong version” issues</title><link>https://markjacobsen.net/2013/07/resolving-ant-javac-class-file-has-wrong-version-issues/</link><pubDate>Wed, 03 Jul 2013 15:10:11 +0000</pubDate><guid>https://markjacobsen.net/2013/07/resolving-ant-javac-class-file-has-wrong-version-issues/</guid><description>&lt;p&gt;Ever run an ANT build in eclipse and it works just fine, but as soon as you run it outside of eclipse you get something like…&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;class file has wrong version 51.0, should be 49.0
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The issue is likely that you need to “fork” in your javac task…&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Before (with error)&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;javac srcdir=&amp;quot;${build.path}&amp;quot; 
- verbose=&amp;quot;true&amp;quot; 
- includeantruntime=&amp;quot;false&amp;quot; 
- includejavaruntime=&amp;quot;false&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;After (no error)&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;javac srcdir=&amp;quot;${build.path}&amp;quot; 
- verbose=&amp;quot;true&amp;quot; 
- includeantruntime=&amp;quot;false&amp;quot; 
- includejavaruntime=&amp;quot;false&amp;quot; 
- fork=&amp;quot;yes&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Hopefully this can save you about 2 hours some day!&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ant on MarkJacobsen.net</title><link>https://markjacobsen.net/tags/ant/</link><description>Recent content in Ant on MarkJacobsen.net</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 03 Jul 2013 15:10:11 +0000</lastBuildDate><atom:link href="https://markjacobsen.net/tags/ant/index.xml" rel="self" type="application/rss+xml"/><item><title>Resolving Ant javac “class file has wrong version” issues</title><link>https://markjacobsen.net/2013/07/resolving-ant-javac-class-file-has-wrong-version-issues/</link><pubDate>Wed, 03 Jul 2013 15:10:11 +0000</pubDate><guid>https://markjacobsen.net/2013/07/resolving-ant-javac-class-file-has-wrong-version-issues/</guid><description>&lt;p&gt;Ever run an ANT build in eclipse and it works just fine, but as soon as you run it outside of eclipse you get something like…&lt;/p&gt;&#10;&lt;pre&gt;&lt;code&gt;class file has wrong version 51.0, should be 49.0&#10;&lt;/code&gt;&lt;/pre&gt;&#10;&lt;p&gt;The issue is likely that you need to “fork” in your javac task…&lt;/p&gt;&#10;&lt;p&gt;&lt;strong&gt;Before (with error)&lt;/strong&gt;&lt;/p&gt;&#10;&lt;pre&gt;&lt;code&gt;javac srcdir=&amp;quot;${build.path}&amp;quot; &#10; verbose=&amp;quot;true&amp;quot; &#10; includeantruntime=&amp;quot;false&amp;quot; &#10; includejavaruntime=&amp;quot;false&amp;quot;&#10;&lt;/code&gt;&lt;/pre&gt;&#10;&lt;p&gt;&lt;strong&gt;After (no error)&lt;/strong&gt;&lt;/p&gt;&#10;&lt;pre&gt;&lt;code&gt;javac srcdir=&amp;quot;${build.path}&amp;quot; &#10; verbose=&amp;quot;true&amp;quot; &#10; includeantruntime=&amp;quot;false&amp;quot; &#10; includejavaruntime=&amp;quot;false&amp;quot; &#10; fork=&amp;quot;yes&amp;quot;&#10;&lt;/code&gt;&lt;/pre&gt;&#10;&lt;p&gt;Hopefully this can save you about 2 hours some day!&lt;/p&gt;&#10;</description></item></channel></rss>
