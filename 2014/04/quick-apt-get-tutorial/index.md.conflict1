@@ -1,0 +1,34 @@
+---
+title: Quick apt-get Tutorial
+author: Mark Jacobsen
+type: post
+date: 2014-04-10T07:18:38+00:00
+categories:
+  - Technology
+tags:
+  - linux
+  - command-line
+---
+
+List installed packages:  
+`dpkg --get-selections | grep -v deinstall`
+
+List installed packages (but filter based on name):  
+`dpkg --get-selections | grep -v deinstall | grep filter`
+
+Install a package:  
+`sudo apt-get install the-package-name`
+
+Uninstall/remove a package:  
+`sudo apt-get remove the-package-name`
+
+Update package lists/dependencies (does not actually install anything):  
+`sudo apt-get update`
+
+Apply updates to existing packages based on an "update" call (without removing anything):  
+`sudo apt-get upgrade`
+
+Apply updates to existing packages based on an "update" call and remove obsolete packages:
+```
+sudo apt-get dist-upgrade
+```
